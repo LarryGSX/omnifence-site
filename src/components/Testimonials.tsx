@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Quote } from "lucide-react";
 
 interface TestimonialProps {
   quote: string;
@@ -16,7 +17,7 @@ interface TestimonialProps {
 
 const Testimonial = ({ quote, author, location }: TestimonialProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="testimonial-card">
       <div className="flex mb-4 text-accent">
         {[...Array(5)].map((_, i) => (
           <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -24,10 +25,11 @@ const Testimonial = ({ quote, author, location }: TestimonialProps) => {
           </svg>
         ))}
       </div>
+      <Quote className="text-accent/30 h-10 w-10 mb-2" />
       <blockquote className="mb-4 text-lg text-gray-700 italic">"{quote}"</blockquote>
-      <div className="font-medium">
+      <div className="font-medium border-t border-gray-100 pt-4 mt-4">
         <p className="text-secondary-foreground">{author}</p>
-        <p className="text-gray-500 text-sm">{location}</p>
+        <p className="text-accent text-sm font-semibold">{location}</p>
       </div>
     </div>
   );
@@ -53,9 +55,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24 bg-secondary relative">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
       <div className="container-custom">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
+          <span className="accent-badge mb-2 inline-block">Testimonials</span>
           <h2 className="section-title">What Our Clients Say</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experience with us.
@@ -75,11 +79,14 @@ const Testimonials = () => {
             ))}
           </CarouselContent>
           <div className="flex justify-center mt-6">
-            <CarouselPrevious className="relative mr-2" />
-            <CarouselNext className="relative ml-2" />
+            <CarouselPrevious className="relative mr-2 hover:bg-accent/20" />
+            <CarouselNext className="relative ml-2 hover:bg-accent/20" />
           </div>
         </Carousel>
       </div>
+      
+      <div className="absolute -bottom-6 right-0 w-24 h-24 bg-accent/10 rounded-full"></div>
+      <div className="absolute -bottom-3 right-24 w-12 h-12 bg-primary/10 rounded-full"></div>
     </section>
   );
 };

@@ -1,26 +1,29 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Fence, Shield, Check } from "lucide-react";
+import { Fence, Shield, LayoutGrid } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
   link: string;
+  delay: string;
 }
 
-const ServiceCard = ({ title, description, icon, link }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, icon, link, delay }: ServiceCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 transition-all hover:shadow-lg">
-      <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4">
+    <div className="service-card slide-up" style={{ animationDelay: delay }}>
+      <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
         {icon}
       </div>
-      <h3 className="text-xl font-heading font-semibold mb-3">{title}</h3>
+      <h3 className="text-xl font-heading font-semibold mb-3">
+        <span className="accent-border-bottom">{title}</span>
+      </h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <Link 
         to={link} 
-        className="text-primary font-medium inline-flex items-center hover:underline"
+        className="text-primary font-medium inline-flex items-center link-underline"
       >
         Learn more
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -37,26 +40,31 @@ const ServicesOverview = () => {
       title: "Residential Fencing",
       description: "Custom-designed residential fences that enhance your home's security, privacy, and curb appeal.",
       icon: <Fence className="h-6 w-6" />,
-      link: "/services#residential"
+      link: "/services#residential",
+      delay: "0.1s"
     },
     {
       title: "Commercial Fencing",
       description: "Secure and durable fencing solutions for businesses, schools, and other commercial properties.",
       icon: <Shield className="h-6 w-6" />,
-      link: "/services#commercial"
+      link: "/services#commercial",
+      delay: "0.2s"
     },
     {
       title: "Custom Deck Building",
       description: "Beautiful, functional decks designed to extend your living space and increase property value.",
-      icon: <Check className="h-6 w-6" />,
-      link: "/services#decks"
+      icon: <LayoutGrid className="h-6 w-6" />,
+      link: "/services#decks",
+      delay: "0.3s"
     },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-secondary">
+    <section className="py-16 md:py-24 bg-secondary relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
       <div className="container-custom">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
+          <span className="accent-badge mb-2 inline-block">What we offer</span>
           <h2 className="section-title">Our Services</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
             Discover our comprehensive range of fencing and deck solutions tailored to your unique needs and preferences.
@@ -71,12 +79,13 @@ const ServicesOverview = () => {
               description={service.description}
               icon={service.icon}
               link={service.link}
+              delay={service.delay}
             />
           ))}
         </div>
 
-        <div className="text-center">
-          <Button asChild size="lg">
+        <div className="text-center fade-in" style={{ animationDelay: '0.4s' }}>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover-scale">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
