@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Fence, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Fence className="h-8 w-8" />
+              <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
               <span className="text-xl font-heading font-bold">Omni Fence & Deck</span>
             </div>
             <p className="text-white/80 mb-4">
