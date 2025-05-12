@@ -1,20 +1,18 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="relative bg-primary py-20 md:py-32">
+  return <section className="relative bg-primary py-20 md:py-32">
       <div className="absolute inset-0 bg-black/50 z-10"></div>
-      <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487252665478-49b61b47f302')] bg-cover bg-center"
-        style={{ opacity: 0.4 }}
-      ></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487252665478-49b61b47f302')] bg-cover bg-center" style={{
+      opacity: 0.4
+    }}></div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent z-[11] opacity-50"></div>
       <div className="container-custom relative z-20">
-        <div className="max-w-3xl slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="accent-badge mb-4 inline-block">Professional & Reliable</span>
+        <div className="max-w-3xl slide-up" style={{
+        animationDelay: '0.1s'
+      }}>
+          <span className="accent-badge mb-4 inline-block">Premier Outdoor Provider</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Professional Fencing <span className="text-accent">&</span> Deck Solutions
           </h1>
@@ -35,8 +33,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-primary/30 to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
