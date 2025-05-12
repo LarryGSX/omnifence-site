@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Check, Handshake, ArrowRight } from "lucide-react";
+import BackgroundBubbles from "@/components/ui/background-bubbles";
 
 const AboutUs = () => {
   return (
@@ -12,7 +13,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent z-[11] opacity-50"></div>
         <div className="container-custom relative z-20">
           <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="accent-badge mb-4 inline-block">Our Story</span>
+            <span className="accent-badge mb-4 inline-block">Est. 2010</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               About Omni Fence and Deck
             </h1>
@@ -26,7 +27,7 @@ const AboutUs = () => {
 
       {/* Our Story */}
       <section className="py-20 relative">
-        <div className="absolute top-1/2 right-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-l-full"></div>
+        <BackgroundBubbles position="right" />
         <div className="container-custom">
           <div className="max-w-3xl mx-auto slide-up" style={{ animationDelay: '0.2s' }}>
             <h2 className="section-title text-center mb-8">Our Story</h2>
@@ -47,10 +48,10 @@ const AboutUs = () => {
 
       {/* Mission & Values */}
       <section className="py-20 bg-secondary relative">
-        <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
+        <BackgroundBubbles position="left" />
         <div className="container-custom">
           <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.3s' }}>
-            <span className="accent-badge mb-4 inline-block">Our Values</span>
+            <span className="accent-badge mb-4 inline-block">Core Principles</span>
             <h2 className="section-title">Our Mission & Values</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
               The principles that guide everything we do at Omni Fence and Deck.
@@ -113,10 +114,10 @@ const AboutUs = () => {
 
       {/* Our Team */}
       <section className="py-20 relative">
-        <div className="absolute top-1/2 right-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-l-full"></div>
+        <BackgroundBubbles position="right" />
         <div className="container-custom">
           <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.6s' }}>
-            <span className="accent-badge mb-4 inline-block">Leadership</span>
+            <span className="accent-badge mb-4 inline-block">Meet the Team</span>
             <h2 className="section-title">Our Leadership Team</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
               Meet the dedicated professionals who lead Omni Fence and Deck.
@@ -165,10 +166,10 @@ const AboutUs = () => {
 
       {/* Safety & Quality Commitment */}
       <section className="py-20 bg-secondary relative">
-        <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
+        <BackgroundBubbles position="left" />
         <div className="container-custom">
           <div className="max-w-3xl mx-auto slide-up" style={{ animationDelay: '1s' }}>
-            <span className="accent-badge mb-4 inline-block">Our Commitment</span>
+            <span className="accent-badge mb-4 inline-block">Our Promise</span>
             <h2 className="section-title text-center mb-8">Our Commitment to Quality & Safety</h2>
             <div className="prose max-w-none">
               <p className="text-lg mb-6 text-gray-700">
