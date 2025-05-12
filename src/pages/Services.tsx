@@ -1,7 +1,6 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Fence, Shield, Check } from "lucide-react";
+import { Fence, Shield, Check, ArrowRight } from "lucide-react";
 
 interface ServiceProps {
   id: string;
@@ -14,33 +13,44 @@ interface ServiceProps {
 
 const ServiceSection = ({ id, title, description, features, image, reversed = false }: ServiceProps) => {
   return (
-    <section id={id} className="py-16 border-b border-gray-200 last:border-b-0">
+    <section id={id} className="py-20 relative border-b border-gray-200 last:border-b-0">
+      <div className={`absolute top-1/2 ${reversed ? 'right-0' : 'left-0'} w-20 h-[80%] bg-accent/5 -z-10 ${reversed ? 'rounded-l-full' : 'rounded-r-full'}`}></div>
       <div className="container-custom">
-        <div className={`grid md:grid-cols-2 gap-8 items-center ${reversed ? 'md:flex-row-reverse' : ''}`}>
-          <div className={`${reversed ? 'md:order-2' : ''}`}>
+        <div className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'md:flex-row-reverse' : ''}`}>
+          <div className={`${reversed ? 'md:order-2' : ''} slide-up`} style={{ animationDelay: '0.2s' }}>
+            <span className="accent-badge mb-4 inline-block">{title}</span>
             <h2 className="section-title mb-4">{title}</h2>
             <p className="text-lg text-gray-700 mb-6">{description}</p>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-4 mb-8">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-1 mr-2 flex-shrink-0" />
-                  <span>{feature}</span>
+                <li key={index} className="flex items-start group">
+                  <div className="mr-4 bg-primary/10 p-2 rounded-full group-hover:bg-accent/20 transition-colors duration-300">
+                    <Check className="h-5 w-5 text-primary group-hover:text-accent transition-colors duration-300" />
+                  </div>
+                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
-            <Button asChild>
-              <Link to="/contact">Request a Quote</Link>
+            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+              <Link to="/contact" className="inline-flex items-center">
+                Request a Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
-          <div className={`${reversed ? 'md:order-1' : ''} bg-gray-200 rounded-lg min-h-[300px] flex items-center justify-center`}>
-            {image ? (
-              <img src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
-            ) : (
-              <div className="text-center p-6">
-                <Fence className="h-16 w-16 text-primary mx-auto mb-4" />
-                <p className="text-lg font-medium">Service Image Placeholder</p>
-              </div>
-            )}
+          <div className={`${reversed ? 'md:order-1' : ''} slide-up`} style={{ animationDelay: '0.3s' }}>
+            <div className="bg-gray-200 rounded-lg min-h-[400px] flex items-center justify-center overflow-hidden group hover:shadow-xl transition-all duration-300">
+              {image ? (
+                <img src={image} alt={title} className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" />
+              ) : (
+                <div className="text-center p-6">
+                  <div className="bg-primary/10 p-4 rounded-full inline-block mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                    <Fence className="h-16 w-16 text-primary group-hover:text-accent transition-colors duration-300" />
+                  </div>
+                  <p className="text-lg font-medium text-primary">Service Image Placeholder</p>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -115,33 +125,45 @@ const Services = () => {
   ];
 
   return (
-    <main>
+    <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-primary py-16 md:py-24">
-        <div className="container-custom text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+      <section className="relative bg-primary py-20 md:py-32">
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487252665478-49b61b47f302')] bg-cover bg-center" style={{ opacity: 0.4 }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent z-[11] opacity-50"></div>
+        <div className="container-custom relative z-20">
+          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
+            <span className="accent-badge mb-4 inline-block">Our Services</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Our Fencing & Deck Services
             </h1>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl md:text-2xl text-white/90 mb-8">
               Discover our comprehensive range of professional fencing and deck solutions designed to enhance your property.
             </p>
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90">
-              <Link to="/contact">Get a Free Quote</Link>
+            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+              <Link to="/contact" className="inline-flex items-center">
+                Get a Free Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-primary/30 to-transparent"></div>
       </section>
 
       {/* Service Navigation */}
-      <section className="py-8 bg-secondary">
+      <section className="py-8 bg-secondary sticky top-0 z-50 shadow-sm">
         <div className="container-custom">
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#residential" className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-colors">Residential Fencing</a>
-            <a href="#commercial" className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-colors">Commercial Fencing</a>
-            <a href="#decks" className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-colors">Custom Decks</a>
-            <a href="#repair" className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-colors">Repair & Maintenance</a>
-            <a href="#gates" className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-colors">Gates & Automation</a>
+            {services.map((service, index) => (
+              <a
+                key={index}
+                href={`#${service.id}`}
+                className="px-4 py-2 bg-white rounded-full shadow-sm hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
+              >
+                {service.title}
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -159,9 +181,11 @@ const Services = () => {
       ))}
 
       {/* Materials Section */}
-      <section className="py-16 bg-secondary">
+      <section className="py-20 bg-secondary relative">
+        <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
         <div className="container-custom">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.2s' }}>
+            <span className="accent-badge mb-4 inline-block">Materials</span>
             <h2 className="section-title">Materials We Use</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
               We source only the highest quality materials for our fencing and deck projects, ensuring durability, aesthetics, and value.
@@ -169,52 +193,64 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <h3 className="text-xl font-heading font-semibold mb-3">Wood</h3>
-              <p className="text-gray-600">
-                Cedar, pine, redwood, and other species selected for their natural beauty and durability.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <h3 className="text-xl font-heading font-semibold mb-3">Vinyl/PVC</h3>
-              <p className="text-gray-600">
-                Low-maintenance, durable plastic materials available in various styles and colors.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <h3 className="text-xl font-heading font-semibold mb-3">Aluminum</h3>
-              <p className="text-gray-600">
-                Lightweight, corrosion-resistant metal ideal for ornamental and security fencing.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-              <h3 className="text-xl font-heading font-semibold mb-3">Composite</h3>
-              <p className="text-gray-600">
-                Engineered wood-plastic blend combining natural appearance with enhanced durability.
-              </p>
-            </div>
+            {[
+              {
+                title: "Wood",
+                description: "Cedar, pine, redwood, and other species selected for their natural beauty and durability."
+              },
+              {
+                title: "Vinyl/PVC",
+                description: "Low-maintenance, durable plastic materials available in various styles and colors."
+              },
+              {
+                title: "Aluminum",
+                description: "Lightweight, corrosion-resistant metal ideal for ornamental and security fencing."
+              },
+              {
+                title: "Composite",
+                description: "Engineered wood-plastic blend combining natural appearance with enhanced durability."
+              }
+            ].map((material, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-sm text-center group hover:shadow-xl transition-all duration-300 slide-up"
+                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+              >
+                <div className="bg-primary/10 p-3 rounded-full inline-block mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                  <Shield className="h-8 w-8 text-primary group-hover:text-accent transition-colors duration-300" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-3 text-primary">{material.title}</h3>
+                <p className="text-gray-600">
+                  {material.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+      <section className="relative py-20 bg-primary">
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487252665478-49b61b47f302')] bg-cover bg-center" style={{ opacity: 0.4 }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent z-[11] opacity-50"></div>
+        <div className="container-custom relative z-20">
+          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
             <p className="text-xl mb-8 text-white/90">
               Contact us today for a free consultation and quote. Our team is ready to bring your vision to life.
             </p>
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90">
-              <Link to="/contact">Get a Free Quote</Link>
+            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+              <Link to="/contact" className="inline-flex items-center">
+                Get a Free Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-primary/30 to-transparent"></div>
       </section>
     </main>
   );
