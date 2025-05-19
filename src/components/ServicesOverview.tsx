@@ -1,7 +1,6 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Fence, Shield, LayoutGrid } from "lucide-react";
+import { Fence, Shield, LayoutGrid, Door } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -57,6 +56,13 @@ const ServicesOverview = () => {
       link: "/services#decks",
       delay: "0.3s"
     },
+    {
+      title: "Gates & Gate Operators",
+      description: "Automated and manual gate solutions that combine security with convenience for both residential and commercial properties.",
+      icon: <Door className="h-6 w-6" />,
+      link: "/services#gates",
+      delay: "0.4s"
+    },
   ];
 
   return (
@@ -71,7 +77,7 @@ const ServicesOverview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
