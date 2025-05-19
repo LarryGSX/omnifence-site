@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Ruler, Shield, Clock, Tool, Check } from "lucide-react";
+import { ArrowRight, Ruler, Shield, Clock, Hammer, Check } from "lucide-react";
 import BackgroundBubbles from "@/components/ui/background-bubbles";
 
 const Services = () => {
@@ -70,7 +71,7 @@ const Services = () => {
             {/* Deck Services */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 slide-up" style={{ animationDelay: '0.4s' }}>
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Tool className="h-8 w-8 text-primary" />
+                <Hammer className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Deck Solutions</h3>
               <ul className="space-y-3 mb-6">
@@ -226,7 +227,7 @@ const Services = () => {
             {/* Expert Team */}
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 slide-up" style={{ animationDelay: '1.4s' }}>
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Tool className="h-8 w-8 text-primary" />
+                <Hammer className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-heading font-semibold mb-3 text-primary">Expert Team</h3>
               <p className="text-gray-600">
