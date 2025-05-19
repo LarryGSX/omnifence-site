@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm sticky top-0 z-[100]">
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
