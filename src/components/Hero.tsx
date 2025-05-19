@@ -13,7 +13,7 @@ const Hero: FC = () => {
             Premier Outdoor Provider
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
-            Professional Fencing <span className="text-accent">&</span> Deck Solutions
+            Professional Fencing & Deck Solutions
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
             Quality craftsmanship, innovative designs, and exceptional service for your residential or commercial property.

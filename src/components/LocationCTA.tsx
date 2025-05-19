@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, ArrowRight } from "lucide-react";
@@ -17,7 +16,7 @@ const LocationCTA = () => {
               <MapPin className="w-10 h-10 text-accent" />
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Find Your Local Omni Fence <span className="text-accent">&</span> Deck Service
+              Find Your Local Omni Fence & Deck Service
             </h2>
             <p className="text-lg mb-8 text-white/90">
               We provide professional fencing and deck services in multiple locations. 
