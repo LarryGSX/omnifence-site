@@ -19,9 +19,9 @@ const Hero: FC = () => {
               <img 
                 src="/Hero_Image_1.jpg" 
                 alt="Fence Installation" 
-                className="w-full h-full object-cover rounded-xl brightness-95"
+                className="w-full h-full object-cover rounded-xl brightness-100"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/15" />
             </div>
             
             {/* Image 2 */}
@@ -29,9 +29,9 @@ const Hero: FC = () => {
               <img 
                 src="/Hero_Image_2.jpeg" 
                 alt="Deck Construction" 
-                className="w-full h-full object-cover rounded-xl brightness-95"
+                className="w-full h-full object-cover rounded-xl brightness-100"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/15" />
             </div>
             
             {/* Image 3 */}
@@ -39,9 +39,9 @@ const Hero: FC = () => {
               <img 
                 src="/Hero_Image_3.jpg" 
                 alt="Custom Fence Design" 
-                className="w-full h-full object-cover rounded-xl brightness-95"
+                className="w-full h-full object-cover rounded-xl brightness-100"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/15" />
             </div>
             
             {/* Image 4 */}
@@ -49,16 +49,16 @@ const Hero: FC = () => {
               <img 
                 src="/Hero_Image_4.jpg" 
                 alt="Professional Installation" 
-                className="w-full h-full object-cover rounded-xl brightness-95"
+                className="w-full h-full object-cover rounded-xl brightness-100"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/15" />
             </div>
           </div>
         </div>
       </div>
 
       {/* Content with text-specific gradient overlay */}
-      <div className="container-custom relative z-50 h-full flex items-center">
+      <div className="container-custom relative z-30 h-full flex items-center">
         <div className="absolute left-0 top-0 w-full h-full pointer-events-none z-[-1]">
           <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </div>
