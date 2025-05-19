@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Ruler, Shield, Clock, Hammer, Check } from "lucide-react";
+import { ArrowRight, Ruler, Shield, Clock, Hammer, Check, Fence, LayoutGrid, DoorClosed } from "lucide-react";
 import BackgroundBubbles from "@/components/ui/background-bubbles";
 import ServicesOverview from "@/components/ServicesOverview";
 
@@ -37,7 +37,88 @@ const Services = () => {
               Comprehensive fencing and deck solutions tailored to your needs.
             </p>
           </div>
-          <ServicesOverview />
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            {/* Residential Fencing */}
+            <div className="service-card slide-up" style={{ animationDelay: '0.3s' }}>
+              <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
+                <Fence className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">
+                <span className="accent-border-bottom">Residential Fencing</span>
+              </h3>
+              <p className="text-gray-600 mb-4">Custom-designed residential fences that enhance your home's security, privacy, and curb appeal.</p>
+              <Link 
+                to="/services#residential" 
+                className="text-primary font-medium inline-flex items-center link-underline"
+              >
+                Learn more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Commercial Fencing */}
+            <div className="service-card slide-up" style={{ animationDelay: '0.4s' }}>
+              <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
+                <Shield className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">
+                <span className="accent-border-bottom">Commercial Fencing</span>
+              </h3>
+              <p className="text-gray-600 mb-4">Secure and durable fencing solutions for businesses, schools, and other commercial properties.</p>
+              <Link 
+                to="/services#commercial" 
+                className="text-primary font-medium inline-flex items-center link-underline"
+              >
+                Learn more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Custom Deck Building */}
+            <div className="service-card slide-up" style={{ animationDelay: '0.5s' }}>
+              <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
+                <LayoutGrid className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">
+                <span className="accent-border-bottom">Custom Deck Building</span>
+              </h3>
+              <p className="text-gray-600 mb-4">Beautiful, functional decks designed to extend your living space and increase property value.</p>
+              <Link 
+                to="/services#decks" 
+                className="text-primary font-medium inline-flex items-center link-underline"
+              >
+                Learn more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Gates & Gate Operators */}
+            <div className="service-card slide-up" style={{ animationDelay: '0.6s' }}>
+              <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
+                <DoorClosed className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-heading font-semibold mb-3">
+                <span className="accent-border-bottom">Gates & Gate Operators</span>
+              </h3>
+              <p className="text-gray-600 mb-4">Automated and manual gate solutions that combine security with convenience for both residential and commercial properties.</p>
+              <Link 
+                to="/services#gates" 
+                className="text-primary font-medium inline-flex items-center link-underline"
+              >
+                Learn more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
