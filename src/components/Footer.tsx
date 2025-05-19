@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -92,22 +93,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-lg font-heading font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="#" className="text-white/80 hover:text-accent transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="#" className="text-white/80 hover:text-accent transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Empty column to replace the Legal section */}
+          <div></div>
         </div>
 
         {/* Bottom */}
