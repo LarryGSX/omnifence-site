@@ -5,61 +5,10 @@ import type { FC } from "react";
 
 const Hero: FC = () => {
   return (
-    <section className="relative h-screen bg-primary">
-      {/* Image Wrapper */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/80 z-20"></div>
-        
-        {/* Hero Images */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-full h-full max-w-7xl mx-auto">
-            {/* Image 1 */}
-            <div className="absolute top-[6%] left-[3%] w-[42%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-10 overflow-hidden">
-              <img 
-                src="/Hero_Image_1.jpg" 
-                alt="Fence Installation" 
-                className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
-              />
-              <div className="absolute inset-0 bg-black/10" />
-            </div>
-            
-            {/* Image 2 */}
-            <div className="absolute top-[13%] right-[7%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
-              <img 
-                src="/Hero_Image_2.jpeg" 
-                alt="Deck Construction" 
-                className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
-              />
-              <div className="absolute inset-0 bg-black/10" />
-            </div>
-            
-            {/* Image 3 */}
-            <div className="absolute bottom-[13%] left-[13%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-30 overflow-hidden">
-              <img 
-                src="/Hero_Image_3.jpg" 
-                alt="Custom Fence Design" 
-                className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
-              />
-              <div className="absolute inset-0 bg-black/10" />
-            </div>
-            
-            {/* Image 4 */}
-            <div className="absolute bottom-[8%] right-[13%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-40 overflow-hidden">
-              <img 
-                src="/Hero_Image_4.jpg" 
-                alt="Professional Installation" 
-                className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
-              />
-              <div className="absolute inset-0 bg-black/10" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Content with text-specific gradient overlay */}
+    <section className="relative min-h-screen bg-primary">
+      {/* Content Section - Left Side */}
       <div className="container-custom relative z-30 h-full flex items-center">
-        <div className="max-w-3xl slide-up" style={{ animationDelay: '0.1s' }}>
+        <div className="w-[60%] pt-20 slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-4 inline-block">Premier Outdoor Provider</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Professional Fencing <span className="text-accent">&</span> Deck Solutions
@@ -77,6 +26,71 @@ const Hero: FC = () => {
             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
               <Link to="/services">Explore Services</Link>
             </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Images Section - Scattered Around */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="relative w-full h-full">
+          {/* Image 1 - Top Left */}
+          <div className="absolute top-[5%] left-[45%] w-[35%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-20 overflow-hidden">
+            <img 
+              src="/Hero_Image_1.jpg" 
+              alt="Fence Installation" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+
+          {/* Image 2 - Top Right */}
+          <div className="absolute top-[8%] right-[5%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-30 overflow-hidden">
+            <img 
+              src="/Hero_Image_2.jpeg" 
+              alt="Deck Construction" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+
+          {/* Image 3 - Middle Right */}
+          <div className="absolute top-[40%] right-[8%] w-[45%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-40 overflow-hidden">
+            <img 
+              src="/Hero_Image_3.jpg" 
+              alt="Custom Fence Design" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+
+          {/* Image 4 - Bottom Right */}
+          <div className="absolute bottom-[10%] right-[5%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-10 overflow-hidden">
+            <img 
+              src="/Hero_Image_4.jpg" 
+              alt="Professional Installation" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+
+          {/* Image 5 - Bottom Left */}
+          <div className="absolute bottom-[8%] left-[45%] w-[35%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-20 overflow-hidden">
+            <img 
+              src="/Hero_Image_5.jpg" 
+              alt="Custom Design" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
+
+          {/* Image 6 - Middle Left */}
+          <div className="absolute top-[45%] left-[40%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-30 overflow-hidden">
+            <img 
+              src="/Hero_Image_6.jpg" 
+              alt="Quality Work" 
+              className="w-full h-full object-cover rounded-xl brightness-110 contrast-110"
+            />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
         </div>
       </div>
