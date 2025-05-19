@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Fence, Shield, LayoutGrid, Door } from "lucide-react";
+import { Fence, Shield, LayoutGrid, DoorClosed } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -59,7 +60,7 @@ const ServicesOverview = () => {
     {
       title: "Gates & Gate Operators",
       description: "Automated and manual gate solutions that combine security with convenience for both residential and commercial properties.",
-      icon: <Door className="h-6 w-6" />,
+      icon: <DoorClosed className="h-6 w-6" />,
       link: "/services#gates",
       delay: "0.4s"
     },
