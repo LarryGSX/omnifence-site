@@ -41,34 +41,34 @@ const Hero: FC = () => {
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 2. Center Feature */}
-        <div className="absolute top-[260px] left-[420px] w-[300px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-22 overflow-hidden">
+        <div className="absolute top-[280px] left-[480px] w-[300px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-22 overflow-hidden">
           <img src="/Hero_Image_9.jpeg" alt="Fence Accent" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 3. Bottom Feature */}
-        <div className="absolute bottom-[60px] left-[600px] w-[280px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-14 overflow-hidden">
+        <div className="absolute bottom-[60px] left-[620px] w-[280px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-14 overflow-hidden">
           <img src="/Hero_Image_5.jpg" alt="Custom Design" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
 
         {/* Mid-sized Photos (220-260px) */}
         {/* 4. Top Left */}
-        <div className="hidden md:block absolute top-[60px] left-[70px] w-[260px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-10 overflow-hidden">
+        <div className="hidden md:block absolute top-[60px] left-[420px] w-[260px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-10 overflow-hidden">
           <img src="/Hero_Image_1.jpg" alt="Fence Installation" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 5. Top Center */}
-        <div className="hidden md:block absolute top-[40px] left-[540px] w-[240px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-4 z-15 overflow-hidden">
+        <div className="hidden md:block absolute top-[40px] left-[700px] w-[240px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-4 z-15 overflow-hidden">
           <img src="/Hero_Image_7.jpeg" alt="Fence Detail" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 6. Top Right */}
-        <div className="absolute top-[200px] right-[60px] w-[220px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
+        <div className="absolute top-[180px] right-[60px] w-[220px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
           <img src="/Hero_Image_2.jpeg" alt="Deck Construction" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 7. Middle Right */}
-        <div className="absolute top-[320px] right-[260px] w-[240px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-4 z-25 overflow-hidden">
+        <div className="absolute top-[320px] right-[300px] w-[240px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-4 z-25 overflow-hidden">
           <img src="/Hero_Image_8.jpeg" alt="Fence Gate" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
@@ -85,12 +85,12 @@ const Hero: FC = () => {
 
         {/* Small Accent Photos (200-220px) */}
         {/* 10. Top Center Left */}
-        <div className="hidden md:block absolute top-[80px] left-[340px] w-[200px] aspect-[3/4] rounded-xl shadow-2xl transform rotate-2 z-12 overflow-hidden">
+        <div className="hidden md:block absolute top-[80px] left-[560px] w-[200px] aspect-[3/4] rounded-xl shadow-2xl transform rotate-2 z-12 overflow-hidden">
           <img src="/Hero_Image_10.jpg" alt="Fence Feature" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* 11. Middle Left */}
-        <div className="hidden md:block absolute top-[320px] left-[120px] w-[210px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-18 overflow-hidden">
+        <div className="hidden md:block absolute top-[320px] left-[140px] w-[210px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-18 overflow-hidden">
           <img src="/Hero_Image_3.jpg" alt="Custom Fence Design" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
