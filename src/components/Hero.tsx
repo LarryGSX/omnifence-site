@@ -33,33 +33,48 @@ const Hero: FC = () => {
       {/* Scattered Images - never overlap text safe zone */}
       <div className="absolute inset-0 z-10 pointer-events-none select-none">
         {/* Top Left (above text) */}
-        <div className="hidden md:block absolute top-[4%] left-[5%] w-[18vw] min-w-[160px] max-w-[260px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-10 overflow-hidden">
+        <div className="hidden md:block absolute top-[2%] left-[3%] w-[22vw] min-w-[180px] max-w-[320px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-10 overflow-hidden">
           <img src="/Hero_Image_1.jpg" alt="Fence Installation" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
+        {/* Top Center */}
+        <div className="hidden md:block absolute top-[0%] left-[32%] w-[20vw] min-w-[160px] max-w-[300px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-15 overflow-hidden">
+          <img src="/Hero_Image_7.jpg" alt="Fence Detail" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
+          <div className="absolute inset-0 bg-black/10" />
+        </div>
         {/* Top Right */}
-        <div className="absolute top-[2%] right-[7%] w-[22vw] min-w-[180px] max-w-[320px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
+        <div className="absolute top-[2%] right-[7%] w-[26vw] min-w-[200px] max-w-[360px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
           <img src="/Hero_Image_2.jpeg" alt="Deck Construction" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* Middle Right (beside text) */}
-        <div className="absolute top-[30%] right-[3%] w-[20vw] min-w-[150px] max-w-[260px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-30 overflow-hidden">
+        <div className="absolute top-[32%] right-[2%] w-[24vw] min-w-[180px] max-w-[320px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-30 overflow-hidden">
           <img src="/Hero_Image_3.jpg" alt="Custom Fence Design" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
+        {/* Center Right */}
+        <div className="hidden md:block absolute top-[48%] right-[18%] w-[18vw] min-w-[120px] max-w-[220px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-25 overflow-hidden">
+          <img src="/Hero_Image_8.jpg" alt="Fence Gate" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
+          <div className="absolute inset-0 bg-black/10" />
+        </div>
         {/* Bottom Right */}
-        <div className="absolute bottom-[6%] right-[10%] w-[18vw] min-w-[140px] max-w-[220px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
+        <div className="absolute bottom-[6%] right-[10%] w-[22vw] min-w-[160px] max-w-[300px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
           <img src="/Hero_Image_4.jpg" alt="Professional Installation" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* Bottom Center (below text) */}
-        <div className="absolute bottom-[4%] left-[38%] w-[20vw] min-w-[150px] max-w-[260px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-10 overflow-hidden">
+        <div className="absolute bottom-[4%] left-[38%] w-[24vw] min-w-[180px] max-w-[320px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-10 overflow-hidden">
           <img src="/Hero_Image_5.jpg" alt="Custom Design" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* Bottom Left (below text, smaller) */}
-        <div className="hidden md:block absolute bottom-[10%] left-[10%] w-[13vw] min-w-[100px] max-w-[160px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
+        <div className="hidden md:block absolute bottom-[10%] left-[10%] w-[16vw] min-w-[120px] max-w-[200px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
           <img src="/Hero_Image_6.jpg" alt="Quality Work" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
+          <div className="absolute inset-0 bg-black/10" />
+        </div>
+        {/* Bottom Far Left */}
+        <div className="hidden md:block absolute bottom-[18%] left-[2%] w-[14vw] min-w-[100px] max-w-[160px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-12 overflow-hidden">
+          <img src="/Hero_Image_9.jpg" alt="Fence Accent" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
       </div>
