@@ -15,39 +15,43 @@ const Hero: FC = () => {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative w-full h-full max-w-7xl mx-auto">
             {/* Image 1 */}
-            <div className="absolute top-[10%] left-[10%] w-[45%] aspect-[4/3] rounded-lg shadow-xl transform -rotate-3 z-10">
+            <div className="absolute top-[8%] left-[7%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-10 overflow-hidden">
               <img 
                 src="/Hero_Image_1.jpg" 
                 alt="Fence Installation" 
-                className="w-full h-full object-cover rounded-lg opacity-70"
+                className="w-full h-full object-cover rounded-xl"
               />
+              <div className="absolute inset-0 bg-white/60" />
             </div>
             
             {/* Image 2 */}
-            <div className="absolute top-[15%] right-[10%] w-[45%] aspect-[4/3] rounded-lg shadow-xl transform rotate-3 z-20">
+            <div className="absolute top-[13%] right-[7%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
               <img 
                 src="/Hero_Image_2.jpeg" 
                 alt="Deck Construction" 
-                className="w-full h-full object-cover rounded-lg opacity-70"
+                className="w-full h-full object-cover rounded-xl"
               />
+              <div className="absolute inset-0 bg-white/60" />
             </div>
             
             {/* Image 3 */}
-            <div className="absolute bottom-[15%] left-[15%] w-[45%] aspect-[4/3] rounded-lg shadow-xl transform rotate-2 z-30">
+            <div className="absolute bottom-[13%] left-[13%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-30 overflow-hidden">
               <img 
                 src="/Hero_Image_3.jpg" 
                 alt="Custom Fence Design" 
-                className="w-full h-full object-cover rounded-lg opacity-70"
+                className="w-full h-full object-cover rounded-xl"
               />
+              <div className="absolute inset-0 bg-white/60" />
             </div>
             
             {/* Image 4 */}
-            <div className="absolute bottom-[10%] right-[15%] w-[45%] aspect-[4/3] rounded-lg shadow-xl transform -rotate-2 z-40">
+            <div className="absolute bottom-[8%] right-[13%] w-[40%] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-40 overflow-hidden">
               <img 
                 src="/Hero_Image_4.jpg" 
                 alt="Professional Installation" 
-                className="w-full h-full object-cover rounded-lg opacity-70"
+                className="w-full h-full object-cover rounded-xl"
               />
+              <div className="absolute inset-0 bg-white/60" />
             </div>
           </div>
         </div>
