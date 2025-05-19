@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { FC } from "react";
 
 const Hero: FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "/Hero_Image_1.jpg",
-    "/Hero_Image_2.jpeg",
     "/Hero_Image_3.jpg",
     "/Hero_Image_4.jpg",
     "/Hero_Image_5.jpg",
@@ -21,22 +20,32 @@ const Hero: FC = () => {
     "/Hero_Image_12.jpg",
   ];
 
-  // Auto-advance carousel every 5 seconds
+  // Auto-advance carousel every 8 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(timer);
   }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
+    // Reset timer by clearing and setting a new interval
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [images.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+    // Reset timer by clearing and setting a new interval
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [images.length]);
 
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -90,7 +99,7 @@ const Hero: FC = () => {
                 <img
                   src={src}
                   alt={`Fence Image ${index + 1}`}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-contain rounded-xl"
                 />
               </div>
             ))}
