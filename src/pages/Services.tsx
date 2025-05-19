@@ -1,8 +1,8 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Ruler, Shield, Clock, Hammer, Check } from "lucide-react";
 import BackgroundBubbles from "@/components/ui/background-bubbles";
+import ServicesOverview from "@/components/ServicesOverview";
 
 const Services = () => {
   return (
@@ -37,95 +37,7 @@ const Services = () => {
               Comprehensive fencing and deck solutions tailored to your needs.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Fencing Services */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 slide-up" style={{ animationDelay: '0.3s' }}>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Ruler className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Fencing Solutions</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Custom fence design and installation</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Privacy, security, and decorative fences</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Fence repair and maintenance</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Gate installation and automation</span>
-                </li>
-              </ul>
-              <Button asChild variant="outline" className="w-full">
-                <Link to="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-
-            {/* Deck Services */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Hammer className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Deck Solutions</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Custom deck design and construction</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Wood and composite decking</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Deck repair and restoration</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Deck maintenance services</span>
-                </li>
-              </ul>
-              <Button asChild variant="outline" className="w-full">
-                <Link to="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-
-            {/* Additional Services */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 slide-up" style={{ animationDelay: '0.5s' }}>
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-                <Shield className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4 text-primary">Additional Services</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Property surveys and measurements</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Permit assistance</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Emergency repairs</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-accent mr-2 mt-1" />
-                  <span className="text-gray-600">Seasonal maintenance plans</span>
-                </li>
-              </ul>
-              <Button asChild variant="outline" className="w-full">
-                <Link to="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-          </div>
+          <ServicesOverview />
         </div>
       </section>
 
