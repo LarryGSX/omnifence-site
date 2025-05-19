@@ -9,7 +9,9 @@ const Hero: FC = () => {
       {/* Text Safe Zone (left 55%) */}
       <div className="container-custom relative z-30 h-full flex items-center min-h-screen">
         <div className="w-full md:w-[55%] pt-20 pb-20 md:pb-0 slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="accent-badge mb-4 inline-block">Premier Outdoor Provider</span>
+          <span className="accent-badge mb-4 inline-block bg-accent text-secondary-foreground font-semibold rounded-full px-4 py-1 shadow-md">
+            Premier Outdoor Provider
+          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Professional Fencing <span className="text-accent">&</span> Deck Solutions
           </h1>
@@ -37,7 +39,7 @@ const Hero: FC = () => {
           <img src="/Hero_Image_1.jpg" alt="Fence Installation" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
-        {/* Top Center */}
+        {/* Top Center (Hero_Image_7) */}
         <div className="hidden md:block absolute top-[1%] left-[30%] w-[18vw] min-w-[140px] max-w-[250px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-15 overflow-hidden">
           <img src="/Hero_Image_7.jpeg" alt="Fence Detail" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
@@ -57,24 +59,14 @@ const Hero: FC = () => {
           <img src="/Hero_Image_8.jpeg" alt="Fence Gate" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
-        {/* Bottom Right */}
-        <div className="absolute bottom-[8%] right-[12%] w-[19vw] min-w-[130px] max-w-[220px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-3 z-20 overflow-hidden">
-          <img src="/Hero_Image_4.jpg" alt="Professional Installation" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
-          <div className="absolute inset-0 bg-black/10" />
-        </div>
-        {/* Bottom Center (below text) */}
-        <div className="absolute bottom-[6%] left-[36%] w-[20vw] min-w-[140px] max-w-[240px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-10 overflow-hidden">
-          <img src="/Hero_Image_5.jpg" alt="Custom Design" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
+        {/* Top Middle (Hero_Image_9) */}
+        <div className="hidden md:block absolute top-[7%] left-[48%] w-[15vw] min-w-[110px] max-w-[180px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-2 z-16 overflow-hidden">
+          <img src="/Hero_Image_9.jpeg" alt="Fence Accent" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
         {/* Bottom Left (below text, smaller) */}
         <div className="hidden md:block absolute bottom-[14%] left-[12%] w-[13vw] min-w-[90px] max-w-[140px] aspect-[4/3] rounded-xl shadow-2xl transform rotate-2 z-20 overflow-hidden">
           <img src="/Hero_Image_6.jpg" alt="Quality Work" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
-          <div className="absolute inset-0 bg-black/10" />
-        </div>
-        {/* Bottom Far Left */}
-        <div className="hidden md:block absolute bottom-[22%] left-[2%] w-[12vw] min-w-[80px] max-w-[120px] aspect-[4/3] rounded-xl shadow-2xl transform -rotate-3 z-12 overflow-hidden">
-          <img src="/Hero_Image_9.jpeg" alt="Fence Accent" className="w-full h-full object-cover rounded-xl brightness-110 contrast-110" onError={e => e.currentTarget.style.display='none'} />
           <div className="absolute inset-0 bg-black/10" />
         </div>
       </div>
