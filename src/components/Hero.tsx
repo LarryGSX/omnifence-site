@@ -87,7 +87,7 @@ const Hero: FC = () => {
 
         {/* Right Side - Image Carousel */}
         <div className="hidden md:block w-[45%] h-full relative">
-          <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-2xl bg-black/10">
             {/* Carousel Images */}
             {images.map((src, index) => (
               <div
@@ -99,7 +99,8 @@ const Hero: FC = () => {
                 <img
                   src={src}
                   alt={`Fence Image ${index + 1}`}
-                  className="w-full h-full object-contain rounded-xl"
+                  className="w-full h-full object-cover object-center rounded-xl"
+                  style={{ transform: 'scale(1.02)' }}
                 />
               </div>
             ))}
