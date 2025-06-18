@@ -23,7 +23,7 @@ const LocationCTA = () => {
               Visit your local page to learn more about specific services in your area.
             </p>
             <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
-              <Link to="/locations/template" className="inline-flex items-center">
+              <Link to="/locations" className="inline-flex items-center">
                 Find Your Location
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

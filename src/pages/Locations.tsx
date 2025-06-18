@@ -221,10 +221,10 @@ const Locations = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/quote">Get a Quote</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link to="/quote">Request Quote</Link>
+                <a href="tel:9181234567">Call (918) 123-4567</a>
               </Button>
             </div>
           </div>

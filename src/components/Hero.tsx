@@ -6,29 +6,29 @@ import type { FC } from "react";
 const Hero: FC = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - Restored to full vibrancy */}
       <div className="absolute inset-0 z-0">
         <img
           src="/Hero_Image_11.jpg"
           alt="Professional fence installation in Tulsa, Oklahoma"
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay for better text contrast */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Minimal gradient overlay only at bottom for text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
       </div>
 
       {/* Content Container */}
-      <div className="container-custom relative z-30 h-full flex items-center justify-center min-h-screen">
-        {/* Centered Text Content - shifted up slightly */}
-        <div className="w-full max-w-3xl text-center slide-up -mt-16 sm:-mt-12" style={{ animationDelay: '0.1s' }}>
+      <div className="container-custom relative z-30 h-full flex items-start justify-center min-h-screen pt-24 md:pt-32">
+        {/* Text Content - Positioned in top third to showcase fence */}
+        <div className="w-full max-w-3xl text-center slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-4 inline-block bg-accent text-secondary-foreground font-semibold rounded-full px-4 py-1 shadow-lg">
             Premier Outdoor Provider
           </span>
-          {/* Refined frosted glass effect - less blur on mobile, subtle on desktop */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] [text-shadow:_2px_2px_4px_rgb(0_0_0_/_60%)] border border-white/30 rounded-lg p-4 md:p-6 backdrop-blur-[2px] md:backdrop-blur-sm bg-black/10 md:bg-black/20">
+          {/* Enhanced text shadows and subtle backdrop for readability without dulling image */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 [text-shadow:_0_4px_8px_rgb(0_0_0_/_80%),_0_2px_4px_rgb(0_0_0_/_90%)] border border-white/40 rounded-lg p-4 md:p-6 backdrop-blur-[1px] bg-gradient-to-b from-black/20 via-black/15 to-black/25">
             Tulsa's Trusted Fencing & Custom Deck Experts
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] [text-shadow:_1px_1px_2px_rgb(0_0_0_/_50%)]">
+          <p className="text-xl md:text-2xl text-white mb-8 [text-shadow:_0_3px_6px_rgb(0_0_0_/_70%),_0_1px_3px_rgb(0_0_0_/_80%)] backdrop-blur-[0.5px] bg-black/10 rounded-lg p-3">
             Quality craftsmanship, innovative designs, and exceptional service for your residential or commercial property throughout Greater Tulsa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ const Hero: FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            {/* Improved contrast for Explore Services button */}
+            {/* Maintaining improved contrast for Explore Services button */}
             <Button asChild size="lg" variant="outline" className="bg-white/15 text-white border-2 border-white hover:bg-white hover:text-primary transition-all duration-300 shadow-lg backdrop-blur-sm">
               <Link to="/services">Explore Services</Link>
             </Button>
