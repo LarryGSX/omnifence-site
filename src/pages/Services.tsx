@@ -7,8 +7,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { 
   Fence, 
   Shield, 
-  LayoutGrid, 
-  DoorClosed, 
+  Hammer, 
+  KeyRound, 
   CheckCircle, 
   Award, 
   Clock,
@@ -46,7 +46,7 @@ const Services = () => {
     {
       id: "custom-decks",
       title: "Custom Decks",
-      icon: <LayoutGrid className="h-8 w-8" />,
+      icon: <Hammer className="h-8 w-8" />,
       description: "Extend your living space with beautifully crafted custom decks that become the heart of your outdoor entertainment. Our expert craftsmen use premium materials and innovative designs to create decks that are both functional and stunning focal points for your home.",
       features: ["Custom Design", "Premium Materials", "Multi-Level Options", "Built to Last"],
       gallery: projectImages.slice(2, 6)
@@ -54,7 +54,7 @@ const Services = () => {
     {
       id: "gates-operators",
       title: "Gates & Gate Operators",
-      icon: <DoorClosed className="h-8 w-8" />,
+      icon: <KeyRound className="h-8 w-8" />,
       description: "Experience the perfect combination of security and convenience with our automated gate systems. From elegant residential entry gates to heavy-duty commercial access controls, we provide complete gate solutions including installation, automation, and ongoing maintenance.",
       features: ["Automated Systems", "Remote Access", "Security Integration", "24/7 Support"],
       gallery: projectImages.slice(0, 4)

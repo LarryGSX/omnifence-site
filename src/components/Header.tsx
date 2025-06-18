@@ -1,11 +1,17 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,6 +19,13 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  // Handle nav link clicks with scroll to top
+  const handleNavClick = () => {
+    closeMenu();
+    // Small delay to ensure navigation happens first
+    setTimeout(() => window.scrollTo(0, 0), 100);
   };
 
   return (
@@ -34,21 +47,21 @@ const Header = () => {
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
+            <Link to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
               <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
               <span className="text-xl font-heading font-bold text-primary">Omni Fence & Deck</span>
             </Link>
 
             {/* Desktop Navigation - Centered between logo and CTA */}
             <nav className="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
-              <Link to="/services" className="font-medium hover:text-primary transition-colors">Services</Link>
-              <Link to="/locations" className="font-medium hover:text-primary transition-colors">Locations</Link>
+              <Link to="/services" className="font-medium hover:text-primary transition-colors" onClick={handleNavClick}>Services</Link>
+              <Link to="/locations" className="font-medium hover:text-primary transition-colors" onClick={handleNavClick}>Locations</Link>
             </nav>
 
             {/* CTA Button - Desktop */}
             <div className="hidden md:block">
               <Button asChild className="btn-accent">
-                <Link to="/quote">Get a Quote</Link>
+                <Link to="/quote" onClick={handleNavClick}>Get a Quote</Link>
               </Button>
             </div>
 
@@ -76,7 +89,7 @@ const Header = () => {
         >
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
-              <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
+              <Link to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
                 <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
                 <span className="text-xl font-heading font-bold text-primary">Omni Fence & Deck</span>
               </Link>
@@ -89,12 +102,12 @@ const Header = () => {
               </button>
             </div>
             <nav className="flex flex-col space-y-6 text-lg font-medium">
-              <Link to="/services" className="hover:text-primary transition-colors" onClick={closeMenu}>Services</Link>
-              <Link to="/locations" className="hover:text-primary transition-colors" onClick={closeMenu}>Locations</Link>
+              <Link to="/services" className="hover:text-primary transition-colors" onClick={handleNavClick}>Services</Link>
+              <Link to="/locations" className="hover:text-primary transition-colors" onClick={handleNavClick}>Locations</Link>
             </nav>
             <div className="mt-auto">
-              <Button asChild className="btn-accent w-full" onClick={closeMenu}>
-                <Link to="/quote">Get a Quote</Link>
+              <Button asChild className="btn-accent w-full">
+                <Link to="/quote" onClick={handleNavClick}>Get a Quote</Link>
               </Button>
             </div>
           </div>

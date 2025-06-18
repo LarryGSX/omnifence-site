@@ -54,10 +54,10 @@ const ShortQuoteForm = () => {
   };
 
   return (
-    <section className="py-12 bg-secondary/50">
+    <section className="py-16 bg-gradient-to-b from-white via-secondary/30 to-white">
       <div className="container-custom">
-        <Card className="max-w-2xl mx-auto shadow-lg">
-          <CardHeader className="text-center">
+        <Card className="max-w-2xl mx-auto shadow-xl border-0 bg-white/95 backdrop-blur-sm">
+          <CardHeader className="text-center pb-6">
             <CardTitle className="text-2xl font-heading text-primary">Get Your Free Quote</CardTitle>
             <CardDescription className="text-lg">
               Tell us about your project and we'll provide a personalized estimate
