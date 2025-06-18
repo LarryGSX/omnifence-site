@@ -41,9 +41,8 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="font-medium hover:text-primary transition-colors">Home</Link>
               <Link to="/services" className="font-medium hover:text-primary transition-colors">Services</Link>
-              <Link to="/locations/template" className="font-medium hover:text-primary transition-colors">Locations</Link>
+              <Link to="/locations" className="font-medium hover:text-primary transition-colors">Locations</Link>
               <Link to="/about" className="font-medium hover:text-primary transition-colors">About Us</Link>
               <Link to="/contact" className="font-medium hover:text-primary transition-colors">Contact</Link>
             </nav>
@@ -51,7 +50,7 @@ const Header = () => {
             {/* CTA Button - Desktop */}
             <div className="hidden md:block">
               <Button asChild className="btn-accent">
-                <Link to="/contact">Get a Quote</Link>
+                <Link to="/quote">Get a Quote</Link>
               </Button>
             </div>
 
@@ -92,15 +91,14 @@ const Header = () => {
               </button>
             </div>
             <nav className="flex flex-col space-y-6 text-lg font-medium">
-              <Link to="/" className="hover:text-primary transition-colors" onClick={closeMenu}>Home</Link>
               <Link to="/services" className="hover:text-primary transition-colors" onClick={closeMenu}>Services</Link>
-              <Link to="/locations/template" className="hover:text-primary transition-colors" onClick={closeMenu}>Locations</Link>
+              <Link to="/locations" className="hover:text-primary transition-colors" onClick={closeMenu}>Locations</Link>
               <Link to="/about" className="hover:text-primary transition-colors" onClick={closeMenu}>About Us</Link>
               <Link to="/contact" className="hover:text-primary transition-colors" onClick={closeMenu}>Contact</Link>
             </nav>
             <div className="mt-auto">
               <Button asChild className="btn-accent w-full" onClick={closeMenu}>
-                <Link to="/contact">Get a Quote</Link>
+                <Link to="/quote">Get a Quote</Link>
               </Button>
             </div>
           </div>
