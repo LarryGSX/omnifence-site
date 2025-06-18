@@ -118,8 +118,9 @@ const Services = () => {
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {services.map((service, index) => (
               <Card 
-                key={service.id} 
-                className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-accent hover:border-primary"
+                key={service.id}
+                id={service.id}
+                className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-accent hover:border-primary"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <CardHeader className="pb-4">
@@ -185,7 +186,7 @@ const Services = () => {
                         </Link>
                       </Button>
                       <Button asChild variant="outline" className="flex-1">
-                        <Link to="/contact">
+                        <Link to="/quote">
                           Learn More
                         </Link>
                       </Button>
@@ -226,7 +227,7 @@ const Services = () => {
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
-              <Link to="/contact">Call (918) 123-4567</Link>
+              <a href="tel:9181234567">Call (918) 123-4567</a>
             </Button>
           </div>
         </div>

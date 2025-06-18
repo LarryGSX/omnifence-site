@@ -10,7 +10,7 @@ const Hero: FC = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/Hero_Image_11.jpg"
-          alt="Background"
+          alt="Professional fence installation in Tulsa, Oklahoma"
           className="w-full h-full object-cover"
         />
       </div>
@@ -23,14 +23,14 @@ const Hero: FC = () => {
             Premier Outdoor Provider
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] [text-shadow:_2px_2px_2px_rgb(0_0_0_/_40%)] border-2 border-white/20 rounded-lg p-4 backdrop-blur-sm">
-            Professional Fencing & Deck Solutions
+            Tulsa's Trusted Fencing & Custom Deck Experts
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-            Quality craftsmanship, innovative designs, and exceptional service for your residential or commercial property.
+            Quality craftsmanship, innovative designs, and exceptional service for your residential or commercial property throughout Greater Tulsa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
-              <Link to="/contact" className="inline-flex items-center">
+              <Link to="/quote" className="inline-flex items-center">
                 Get a Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

@@ -39,12 +39,10 @@ const Header = () => {
               <span className="text-xl font-heading font-bold text-primary">Omni Fence & Deck</span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            {/* Desktop Navigation - Centered between logo and CTA */}
+            <nav className="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
               <Link to="/services" className="font-medium hover:text-primary transition-colors">Services</Link>
               <Link to="/locations" className="font-medium hover:text-primary transition-colors">Locations</Link>
-              <Link to="/about" className="font-medium hover:text-primary transition-colors">About Us</Link>
-              <Link to="/contact" className="font-medium hover:text-primary transition-colors">Contact</Link>
             </nav>
 
             {/* CTA Button - Desktop */}
@@ -93,8 +91,6 @@ const Header = () => {
             <nav className="flex flex-col space-y-6 text-lg font-medium">
               <Link to="/services" className="hover:text-primary transition-colors" onClick={closeMenu}>Services</Link>
               <Link to="/locations" className="hover:text-primary transition-colors" onClick={closeMenu}>Locations</Link>
-              <Link to="/about" className="hover:text-primary transition-colors" onClick={closeMenu}>About Us</Link>
-              <Link to="/contact" className="hover:text-primary transition-colors" onClick={closeMenu}>Contact</Link>
             </nav>
             <div className="mt-auto">
               <Button asChild className="btn-accent w-full" onClick={closeMenu}>
