@@ -62,11 +62,15 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-white font-semibold px-6 py-3 rounded hover:bg-primary/90 transition-all;
+    @apply bg-primary text-white font-semibold px-8 py-4 rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   .btn-accent {
-    @apply bg-accent text-secondary-foreground font-semibold px-6 py-3 rounded hover:bg-accent/90 transition-all;
+    @apply bg-accent text-secondary-foreground font-semibold px-8 py-4 rounded-lg hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-primary border-2 border-primary font-semibold px-8 py-4 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow-md hover:shadow-lg;
   }
   
   .section-title {
@@ -75,6 +79,10 @@
   
   .section-subtitle {
     @apply text-xl md:text-2xl font-heading font-semibold mb-4 text-secondary-foreground;
+  }
+  
+  .professional-badge {
+    @apply inline-flex items-center px-4 py-2 bg-accent/20 text-primary font-semibold text-sm uppercase tracking-wider rounded-full border border-accent/30 shadow-sm;
   }
   
   /* New accent elements */
@@ -91,32 +99,53 @@
   }
   
   .service-card {
-    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border-t-4 border-transparent hover:border-accent;
+    @apply bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl border border-gray-100 hover:border-accent/50 transform hover:-translate-y-1 relative overflow-hidden;
+  }
+  
+  .service-card::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-accent;
   }
   
   .testimonial-card {
-    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px];
+    @apply bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-2xl border border-gray-100 hover:border-primary/30 relative;
   }
   
-  /* Animations */
+  .professional-card {
+    @apply bg-gradient-to-br from-white to-gray-50/50 rounded-xl shadow-lg border border-gray-200 p-8 transition-all duration-300 hover:shadow-2xl hover:border-primary/30 transform hover:-translate-y-0.5;
+  }
+  
+  .trust-indicator {
+    @apply inline-flex items-center space-x-2 text-sm font-semibold text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 shadow-sm;
+  }
+  
+    /* Professional Animations - More Subtle */
   .fade-in {
-    @apply opacity-0 animate-[fadeIn_0.5s_ease-in-out_forwards];
+    @apply opacity-0 animate-[fadeIn_0.6s_ease-in-out_forwards];
   }
-  
+
   .slide-up {
-    @apply translate-y-4 opacity-0 animate-[slideUp_0.5s_ease-out_forwards];
+    @apply translate-y-2 opacity-0 animate-[slideUp_0.6s_ease-out_forwards];
   }
-  
+
   .hover-lift {
-    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-md;
   }
-  
+
   .hover-accent {
-    @apply transition-all duration-200 hover:text-accent;
+    @apply transition-all duration-300 hover:text-accent;
+  }
+
+  .hover-scale {
+    @apply transition-all duration-300 hover:scale-[1.02];
   }
   
-  .hover-scale {
-    @apply transition-all duration-300 hover:scale-105;
+  /* Professional Elements */
+  .certification-badge {
+    @apply inline-flex items-center px-3 py-1 bg-green-50 text-green-800 font-medium text-xs uppercase tracking-wider rounded-sm border border-green-200;
+  }
+  
+  .warranty-highlight {
+    @apply bg-accent/5 border-l-4 border-accent px-4 py-3 text-accent-dark font-medium;
   }
   
   .link-underline {

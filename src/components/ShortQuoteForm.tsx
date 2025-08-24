@@ -56,12 +56,28 @@ const ShortQuoteForm = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-white via-secondary/30 to-white">
       <div className="container-custom">
-        <Card className="max-w-2xl mx-auto shadow-xl border-0 bg-white/95 backdrop-blur-sm">
+        <Card className="max-w-2xl mx-auto shadow-2xl border-0 bg-white/95 backdrop-blur-sm relative overflow-hidden">
+          {/* Decorative top border */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary"></div>
+          
           <CardHeader className="text-center pb-6">
-            <CardTitle className="text-2xl font-heading text-primary">Get Your Free Quote</CardTitle>
+            <CardTitle className="text-2xl font-heading text-primary mb-2">Get Your Free Quote</CardTitle>
             <CardDescription className="text-lg">
               Tell us about your project and we'll provide a personalized estimate
             </CardDescription>
+            
+            {/* Trust indicators */}
+            <div className="flex flex-wrap justify-center gap-4 mt-6">
+              <div className="trust-indicator">
+                <span>✓ Free Estimates</span>
+              </div>
+              <div className="trust-indicator">
+                <span>✓ 24hr Response</span>
+              </div>
+              <div className="trust-indicator">
+                <span>✓ Licensed & Insured</span>
+              </div>
+            </div>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
