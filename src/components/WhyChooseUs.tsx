@@ -11,7 +11,7 @@ interface FeatureProps {
 const Feature = ({ title, description, icon, delay }: FeatureProps) => {
   return (
     <div className="flex flex-col items-center text-center md:items-start md:text-left slide-up" style={{ animationDelay: delay }}>
-      <div className="inline-flex p-3 rounded-full bg-primary text-white mb-4 hover-scale">
+      <div className="inline-flex p-3 rounded-full bg-primary text-white mb-4 hover-scale shadow-clean">
         {icon}
       </div>
       <h3 className="text-xl font-heading font-semibold mb-3">
@@ -52,8 +52,10 @@ const WhyChooseUs = () => {
 
   return (
     <section className="py-16 md:py-24 relative">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full translate-y-1/4 -translate-x-1/4"></div>
+      {/* Subtle background elements - no harsh borders */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/3 rounded-full translate-y-1/4 -translate-x-1/4"></div>
+      
       <div className="container-custom relative">
         <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-2 inline-block">Why Us</span>

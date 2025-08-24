@@ -67,8 +67,10 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-secondary relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+    <section className="py-16 md:py-24 bg-seamless relative overflow-hidden">
+      {/* Subtle top accent line - no harsh borders */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
+      
       <div className="container-custom">
         <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-2 inline-block">What we offer</span>
@@ -92,11 +94,14 @@ const ServicesOverview = () => {
         </div>
 
         <div className="text-center fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover-scale">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover-scale shadow-clean">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
       </div>
+      
+      {/* Subtle bottom accent line - no harsh borders */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
     </section>
   );
 };

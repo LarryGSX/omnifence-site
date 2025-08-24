@@ -55,8 +55,10 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-secondary relative">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+    <section className="py-16 md:py-24 relative">
+      {/* Subtle top accent line - no harsh borders */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
+      
       <div className="container-custom">
         <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-2 inline-block">Testimonials</span>
@@ -79,14 +81,15 @@ const Testimonials = () => {
             ))}
           </CarouselContent>
           <div className="flex justify-center mt-6">
-            <CarouselPrevious className="relative mr-2 hover:bg-accent/20" />
-            <CarouselNext className="relative ml-2 hover:bg-accent/20" />
+            <CarouselPrevious className="relative mr-2 hover:bg-accent/20 shadow-clean" />
+            <CarouselNext className="relative ml-2 hover:bg-accent/20 shadow-clean" />
           </div>
         </Carousel>
       </div>
       
-      <div className="absolute -bottom-6 right-0 w-24 h-24 bg-accent/10 rounded-full"></div>
-      <div className="absolute -bottom-3 right-24 w-12 h-12 bg-primary/10 rounded-full"></div>
+      {/* Subtle background elements - no harsh borders */}
+      <div className="absolute -bottom-6 right-0 w-24 h-24 bg-accent/5 rounded-full"></div>
+      <div className="absolute -bottom-3 right-24 w-12 h-12 bg-primary/5 rounded-full"></div>
     </section>
   );
 };

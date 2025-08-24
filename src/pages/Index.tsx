@@ -25,20 +25,29 @@ const Index = () => {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <section aria-label="Quick Quote Form" className="py-8">
+      
+      {/* Seamless quote form section */}
+      <section aria-label="Quick Quote Form" className="relative">
         <ShortQuoteForm />
       </section>
-      <section aria-label="Services Overview" className="relative py-16">
+      
+      {/* Seamless services section */}
+      <section aria-label="Services Overview" className="relative">
         <ServicesOverview />
-        <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
       </section>
-      <section aria-label="Why Choose Us" className="py-16">
+      
+      {/* Seamless why choose us section */}
+      <section aria-label="Why Choose Us" className="py-16 bg-seamless">
         <WhyChooseUs />
       </section>
-      <section aria-label="Customer Testimonials" className="py-16">
+      
+      {/* Seamless testimonials section */}
+      <section aria-label="Customer Testimonials" className="py-16 bg-seamless-alt">
         <Testimonials />
       </section>
-      <section aria-label="Service Areas" className="py-16">
+      
+      {/* Seamless location CTA section */}
+      <section aria-label="Service Areas" className="py-16 bg-seamless">
         <LocationCTA />
       </section>
     </main>
