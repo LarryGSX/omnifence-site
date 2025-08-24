@@ -23,13 +23,24 @@ const Index = () => {
   }, []);
 
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
-      <ShortQuoteForm />
-      <ServicesOverview />
-      <WhyChooseUs />
-      <Testimonials />
-      <LocationCTA />
+      <section aria-label="Quick Quote Form" className="py-8">
+        <ShortQuoteForm />
+      </section>
+      <section aria-label="Services Overview" className="relative py-16">
+        <ServicesOverview />
+        <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
+      </section>
+      <section aria-label="Why Choose Us" className="py-16">
+        <WhyChooseUs />
+      </section>
+      <section aria-label="Customer Testimonials" className="py-16">
+        <Testimonials />
+      </section>
+      <section aria-label="Service Areas" className="py-16">
+        <LocationCTA />
+      </section>
     </main>
   );
 };

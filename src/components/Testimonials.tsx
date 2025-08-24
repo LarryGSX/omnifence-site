@@ -17,20 +17,18 @@ interface TestimonialProps {
 
 const Testimonial = ({ quote, author, location }: TestimonialProps) => {
   return (
-    <div className="testimonial-card h-full">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex text-accent">
-          {[...Array(5)].map((_, i) => (
-            <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-          ))}
-        </div>
-        <Quote className="text-accent/30 h-10 w-10" />
+    <div className="testimonial-card">
+      <div className="flex mb-4 text-accent">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+        ))}
       </div>
-      <blockquote className="mb-6 text-lg text-gray-700 leading-relaxed italic">"{quote}"</blockquote>
-      <div className="border-t border-gray-100 pt-4 mt-auto">
-        <p className="font-semibold text-secondary-foreground">{author}</p>
+      <Quote className="text-accent/30 h-10 w-10 mb-2" />
+      <blockquote className="mb-4 text-lg text-gray-700 italic">"{quote}"</blockquote>
+      <div className="font-medium border-t border-gray-100 pt-4 mt-4">
+        <p className="text-secondary-foreground">{author}</p>
         <p className="text-accent text-sm font-semibold">{location}</p>
       </div>
     </div>
@@ -61,7 +59,7 @@ const Testimonials = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
       <div className="container-custom">
         <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="professional-badge mb-4 inline-block">Testimonials</span>
+          <span className="accent-badge mb-2 inline-block">Testimonials</span>
           <h2 className="section-title">What Our Clients Say</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
             Don't just take our word for it. Here's what our satisfied customers have to say about their experience with us.

@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Fence, Shield, LayoutGrid, DoorClosed, ArrowRight } from "lucide-react";
+import { Fence, Shield, LayoutGrid, DoorClosed } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -14,24 +14,22 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, icon, link, delay }: ServiceCardProps) => {
   return (
     <div className="service-card slide-up" style={{ animationDelay: delay }}>
-      <div className="text-center space-y-6">
-        <div className="mx-auto w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-          {icon}
-        </div>
-        <div>
-          <h3 className="text-2xl font-heading font-bold mb-4 text-primary">
-            {title}
-          </h3>
-          <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
-          <Link 
-            to={link} 
-            className="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors group bg-accent/10 px-4 py-2 rounded-full hover:bg-accent/20"
-          >
-            Learn More
-            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
+      <div className="inline-flex p-3 rounded-full bg-primary/10 text-primary mb-4 hover-scale">
+        {icon}
       </div>
+      <h3 className="text-xl font-heading font-semibold mb-3">
+        <span className="accent-border-bottom">{title}</span>
+      </h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <Link 
+        to={link} 
+        className="text-primary font-medium inline-flex items-center link-underline"
+      >
+        Learn more
+        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </Link>
     </div>
   );
 };
@@ -69,22 +67,18 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-secondary via-white to-secondary relative overflow-hidden">
-      {/* Decorative elements */}
+    <section className="py-16 md:py-24 bg-secondary relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-      <div className="absolute top-20 right-10 w-32 h-32 bg-primary/5 rounded-full"></div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-accent/10 rounded-full"></div>
-      
-      <div className="container-custom relative">
+      <div className="container-custom">
         <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="professional-badge mb-4 inline-block">What we offer</span>
+          <span className="accent-badge mb-2 inline-block">What we offer</span>
           <h2 className="section-title">Our Services</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
             Discover our comprehensive range of fencing and deck solutions tailored to your unique needs and preferences.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
@@ -97,8 +91,8 @@ const ServicesOverview = () => {
           ))}
         </div>
 
-        <div className="text-center fade-in" style={{ animationDelay: '0.5s' }}>
-          <Button asChild size="lg" className="btn-primary">
+        <div className="text-center fade-in" style={{ animationDelay: '0.4s' }}>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover-scale">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
