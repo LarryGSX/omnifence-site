@@ -11,7 +11,6 @@ import Locations from "./pages/Locations";
 import Quote from "./pages/Quote";
 import LocationTemplate from "./pages/LocationTemplate";
 import NotFound from "./pages/NotFound";
-import { ParticlesDemo } from "./components/ui/particles-demo";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +29,6 @@ const App = () => (
               <Route path="/locations" element={<Locations />} />
               <Route path="/quote" element={<Quote />} />
               <Route path="/locations/template" element={<LocationTemplate />} />
-              <Route path="/demo" element={<ParticlesDemo />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
