@@ -101,7 +101,7 @@ const Services = () => {
           <div className="text-center mb-16 slide-up" style={{
           animationDelay: '0.2s'
         }}>
-            <span className="accent-badge mb-4 inline-block">What We Offer</span>
+            
             <h2 className="section-title">Our Premium Services</h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-600">
               Comprehensive fencing and deck solutions tailored to your specific needs, 
