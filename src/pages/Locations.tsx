@@ -178,20 +178,20 @@ We also serve communities and rural areas within our service radius not listed b
           </div>
 
           {/* Contact Section for Unlisted Areas */}
-          <div className="text-center mb-4 slide-up" style={{
+          <div className="text-center slide-up" style={{
           animationDelay: '0.9s'
         }}>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               Don't See Your Area Listed?
             </h2>
-            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
               We're always expanding our service areas! Contact us to see if we can serve your location. 
               Special arrangements may be available for larger projects.
             </p>
           </div>
           
           {/* Contact Form */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto -mt-12">
             <ShortQuoteForm />
           </div>
         </div>
