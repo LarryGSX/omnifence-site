@@ -174,9 +174,8 @@ const Locations = () => {
             </div>
           </div>
 
-
           {/* Additional Coverage Note */}
-          <div className="bg-white/80 rounded-lg p-6 text-center mb-16 slide-up" style={{
+          <div className="bg-white/80 rounded-lg p-6 text-center mb-8 slide-up" style={{
           animationDelay: '0.8s'
         }}>
             <p className="text-gray-600 text-sm">
@@ -184,19 +183,15 @@ const Locations = () => {
               Contact us to confirm service availability in your specific location.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Contact Section for Unlisted Areas */}
-      <section className="py-16 bg-gradient-to-b from-secondary/30 to-white">
-        <div className="container-custom">
-          <div className="text-center mb-8 slide-up" style={{
+          {/* Contact Section for Unlisted Areas */}
+          <div className="text-center mb-4 slide-up" style={{
           animationDelay: '0.9s'
         }}>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               Don't See Your Area Listed?
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
               We're always expanding our service areas! Contact us to see if we can serve your location. 
               Special arrangements may be available for larger projects.
             </p>
