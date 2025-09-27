@@ -147,51 +147,61 @@ const Locations = () => {
             
             <h2 className="section-title">Our Service Locations</h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-600">
-              From our headquarters in Tulsa, we proudly serve Oklahoma within 50-100 miles of the Greater Tulsa area 
-              with professional fencing and deck installation services.
+              Professional fencing and deck installation services throughout the Greater Tulsa metropolitan area and surrounding communities.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-            {locations.map((location, index) => <Card key={location.id} className={`
-                  relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer
-                  ${location.isHeadquarters ? 'ring-2 ring-accent border-accent bg-gradient-to-br from-accent/5 to-primary/5' : 'border-t-4 border-primary hover:border-accent'}
+          {/* Service Locations Grid - Clean Badge Style */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {locations.map((location, index) => (
+                <div key={location.id} className={`
+                  relative p-4 rounded-lg border-2 transition-all duration-300 text-center
+                  ${location.isHeadquarters 
+                    ? 'border-accent bg-gradient-to-br from-accent/10 to-primary/10 shadow-lg' 
+                    : 'border-gray-200 bg-white hover:border-primary/50 hover:shadow-md'
+                  }
                 `} style={{
-            animationDelay: `${0.3 + index * 0.05}s`
-          }}>
-                {location.isHeadquarters && <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-primary text-white font-semibold">
-                      <Star className="h-4 w-4 mr-1" />
-                      HQ
-                    </Badge>
-                  </div>}
-
-                <CardHeader className="pb-3">
-                  <div className="flex items-center mb-2">
-                    <MapPin className="h-5 w-5 text-primary mr-2" />
-                    <CardTitle className={`text-lg font-heading ${location.isHeadquarters ? 'text-primary' : 'text-gray-800'}`}>
+                  animationDelay: `${0.3 + index * 0.05}s`
+                }}>
+                  {location.isHeadquarters && (
+                    <div className="absolute -top-2 -right-2">
+                      <Badge className="bg-primary text-white font-semibold text-xs">
+                        <Star className="h-3 w-3 mr-1" />
+                        HQ
+                      </Badge>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center justify-center mb-2">
+                    <MapPin className="h-4 w-4 text-primary mr-2" />
+                    <span className={`font-semibold ${location.isHeadquarters ? 'text-primary' : 'text-gray-800'}`}>
                       {location.city}
-                    </CardTitle>
+                    </span>
                   </div>
-                </CardHeader>
+                </div>
+              ))}
+            </div>
+          </div>
 
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-sm leading-relaxed">
-                    {location.description}
-                  </CardDescription>
-
-                  {/* CTA Button */}
-                  <div className="pt-2">
-                    <Button asChild size="sm" className={`w-full ${location.isHeadquarters ? 'btn-accent' : 'btn-primary'}`}>
-                      <Link to="/quote" state={{
-                    location: location.id
-                  }}>
-                        Get Quote
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>)}
+          {/* Single CTA for All Locations */}
+          <div className="text-center mb-12">
+            <div className="bg-white rounded-lg p-8 shadow-lg max-w-2xl mx-auto">
+              <h3 className="text-xl font-heading font-bold text-primary mb-4">
+                Ready to Get Started?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Contact us for a free estimate on your fencing or deck project in any of our service areas.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="btn-primary">
+                  <Link to="/quote">Get Free Quote</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <a href="tel:9181234567">Call (918) 123-4567</a>
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Additional Coverage Note */}
@@ -205,21 +215,22 @@ const Locations = () => {
           </div>
 
           {/* Contact Section for Unlisted Areas */}
-          <div className="bg-white rounded-lg shadow-lg slide-up" style={{
+          <div className="bg-white rounded-lg shadow-lg slide-up max-w-5xl mx-auto" style={{
           animationDelay: '0.9s'
         }}>
-            <div className="text-center p-8 pb-4">
+            <div className="text-center px-8 pt-8 pb-2">
               <h3 className="text-2xl font-heading font-bold text-primary mb-4">
                 Don't See Your Area Listed?
               </h3>
-              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">We're always expanding our service areas! Contact us to see if we can serve your location.</p>
+              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                We're always expanding our service areas! Contact us to see if we can serve your location. 
+                Special arrangements may be available for larger projects.
+              </p>
             </div>
             
             {/* Contact Form */}
-            <div className="px-4 pb-4">
-              <div className="max-w-3xl mx-auto">
-                <ShortQuoteForm />
-              </div>
+            <div className="px-8 pb-8">
+              <ShortQuoteForm />
             </div>
           </div>
         </div>
