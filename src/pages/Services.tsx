@@ -4,136 +4,78 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { 
-  Fence, 
-  Shield, 
-  Hammer, 
-  KeyRound, 
-  CheckCircle, 
-  Award, 
-  Clock,
-  Star,
-  Brush
-} from "lucide-react";
-
+import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
 const Services = () => {
   // Service-specific project images
-  const residentialImages = [
-    "/Privacy/Attachment(104).jpg",
-    "/Privacy/20230509_173703.jpg",
-    "/Privacy/Attachment(102).jpg",
-    "/Privacy/IMG_20230802_110624722(1).jpg",
-    "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg",
-    "/Ameristar/1000002894(1).jpg",
-    "/Round Rail/Attachment(95).jpg"
-  ];
-
-  const commercialImages = [
-    "/Commercial/488519825_1077025151110237_580836037559699280_n.jpg",
-    "/Commercial/488544588_1077025094443576_7595472113235010536_n.jpg",
-    "/Commercial/488962114_1077025047776914_537378424244966229_n.jpg",
-    "/Commercial/Attachment(137).jpg"
-  ];
-
-  const customDeckImages = [
-    "/Hero_Image_3.jpg",
-    "/Hero_Image_4.jpg",
-    "/Hero_Image_5.jpg",
-    "/Hero_Image_6.jpg"
-  ];
-
-  const gatesImages = [
-    "/Gates-and-Gate-Operators/488675040_1077025164443569_4432792265416510015_n.jpg",
-    "/Gates-and-Gate-Operators/488706680_1077025161110236_3664048956504830031_n.jpg",
-    "/Gates-and-Gate-Operators/488867158_1077025147776904_1813597507789668214_n.jpg",
-    "/Gates-and-Gate-Operators/Attachment(81).jpg"
-  ];
-
-  const preStainedImages = [
-    "/Privacy/Resized_20220717_202221.jpeg",
-    "/Hero_Image_8.jpeg",
-    "/Pre-Stained/IMG_5981.jpg"
-  ];
-
-  const services = [
-    {
-      id: "residential-fencing",
-      title: "Residential Fencing",
-      icon: <Fence className="h-8 w-8" />,
-      description: "Transform your home with custom-designed residential fences that perfectly blend security, privacy, and curb appeal. From classic wooden privacy fences to modern vinyl and aluminum options, we create solutions that enhance your property value while reflecting your personal style.",
-      features: ["Privacy & Security", "Custom Designs", "Premium Materials", "Professional Installation"],
-      gallery: residentialImages
-    },
-    {
-      id: "commercial-fencing",
-      title: "Commercial Fencing", 
-      icon: <Shield className="h-8 w-8" />,
-      description: "Protect your business with industrial-grade fencing solutions designed for durability and security. We specialize in chain-link, steel, and high-security fencing systems that meet commercial standards while maintaining professional aesthetics for your property.",
-      features: ["High Security", "Industrial Grade", "Code Compliance", "Rapid Installation"],
-      gallery: commercialImages
-    },
-    {
-      id: "custom-decks",
-      title: "Custom Decks",
-      icon: <Hammer className="h-8 w-8" />,
-      description: "Extend your living space with beautifully crafted custom decks that become the heart of your outdoor entertainment. Our expert craftsmen use premium materials and innovative designs to create decks that are both functional and stunning focal points for your home.",
-      features: ["Custom Design", "Premium Materials", "Multi-Level Options", "Built to Last"],
-      gallery: customDeckImages
-    },
-    {
-      id: "gates-operators",
-      title: "Gates & Gate Operators",
-      icon: <KeyRound className="h-8 w-8" />,
-      description: "Experience the perfect combination of security and convenience with our automated gate systems. From elegant residential entry gates to heavy-duty commercial access controls, we provide complete gate solutions including installation, automation, and ongoing maintenance.",
-      features: ["Automated Systems", "Remote Access", "Security Integration", "Professional Installation"],
-      gallery: gatesImages
-    }
-  ];
-
+  const residentialImages = ["/Privacy/Attachment(104).jpg", "/Privacy/20230509_173703.jpg", "/Privacy/Attachment(102).jpg", "/Privacy/IMG_20230802_110624722(1).jpg", "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg", "/Ameristar/1000002894(1).jpg", "/Round Rail/Attachment(95).jpg"];
+  const commercialImages = ["/Commercial/488519825_1077025151110237_580836037559699280_n.jpg", "/Commercial/488544588_1077025094443576_7595472113235010536_n.jpg", "/Commercial/488962114_1077025047776914_537378424244966229_n.jpg", "/Commercial/Attachment(137).jpg"];
+  const customDeckImages = ["/Hero_Image_3.jpg", "/Hero_Image_4.jpg", "/Hero_Image_5.jpg", "/Hero_Image_6.jpg"];
+  const gatesImages = ["/Gates-and-Gate-Operators/488675040_1077025164443569_4432792265416510015_n.jpg", "/Gates-and-Gate-Operators/488706680_1077025161110236_3664048956504830031_n.jpg", "/Gates-and-Gate-Operators/488867158_1077025147776904_1813597507789668214_n.jpg", "/Gates-and-Gate-Operators/Attachment(81).jpg"];
+  const preStainedImages = ["/Privacy/Resized_20220717_202221.jpeg", "/Hero_Image_8.jpeg", "/Pre-Stained/IMG_5981.jpg"];
+  const services = [{
+    id: "residential-fencing",
+    title: "Residential Fencing",
+    icon: <Fence className="h-8 w-8" />,
+    description: "Transform your home with custom-designed residential fences that perfectly blend security, privacy, and curb appeal. From classic wooden privacy fences to modern vinyl and aluminum options, we create solutions that enhance your property value while reflecting your personal style.",
+    features: ["Privacy & Security", "Custom Designs", "Premium Materials", "Professional Installation"],
+    gallery: residentialImages
+  }, {
+    id: "commercial-fencing",
+    title: "Commercial Fencing",
+    icon: <Shield className="h-8 w-8" />,
+    description: "Protect your business with industrial-grade fencing solutions designed for durability and security. We specialize in chain-link, steel, and high-security fencing systems that meet commercial standards while maintaining professional aesthetics for your property.",
+    features: ["High Security", "Industrial Grade", "Code Compliance", "Rapid Installation"],
+    gallery: commercialImages
+  }, {
+    id: "custom-decks",
+    title: "Custom Decks",
+    icon: <Hammer className="h-8 w-8" />,
+    description: "Extend your living space with beautifully crafted custom decks that become the heart of your outdoor entertainment. Our expert craftsmen use premium materials and innovative designs to create decks that are both functional and stunning focal points for your home.",
+    features: ["Custom Design", "Premium Materials", "Multi-Level Options", "Built to Last"],
+    gallery: customDeckImages
+  }, {
+    id: "gates-operators",
+    title: "Gates & Gate Operators",
+    icon: <KeyRound className="h-8 w-8" />,
+    description: "Experience the perfect combination of security and convenience with our automated gate systems. From elegant residential entry gates to heavy-duty commercial access controls, we provide complete gate solutions including installation, automation, and ongoing maintenance.",
+    features: ["Automated Systems", "Remote Access", "Security Integration", "Professional Installation"],
+    gallery: gatesImages
+  }];
   const preStainedService = {
     id: "pre-stained-fencing",
     title: "Pre-Stained Fencing",
     icon: <Brush className="h-8 w-8" />,
     description: "Expedite the installation process with pre-stained wood materials. Fencing is pre-stained and curb-appeal-ready with one-time installation and protection against the elements from day one. The factory pre-stain option applies a professional grade stain to the front, back, edges, and ends of each board before the fence is installed, ensuring full stain coverage as opposed to staining after the wood is hung.",
-    features: [
-      "Professional Grade", 
-      "Virtually Weatherproof", 
-      "Fade Resistant", 
-      "Maximum UV Protection",
-      "Prevents Water Damage",
-      "Fungus and Mildew-Resistant",
-      "Extends The Life Of Your Wood",
-      "Beautifies And Protects"
-    ],
+    features: ["Professional Grade", "Virtually Weatherproof", "Fade Resistant", "Maximum UV Protection", "Prevents Water Damage", "Fungus and Mildew-Resistant", "Extends The Life Of Your Wood", "Beautifies And Protects"],
     gallery: preStainedImages
   };
-
-  const trustBadges = [
-    { icon: <Award className="h-5 w-5" />, text: "Licensed & Insured" },
-    { icon: <Clock className="h-5 w-5" />, text: "10+ Years Experience" },
-    { icon: <CheckCircle className="h-5 w-5" />, text: "Quality Guarantee" },
-    { icon: <Star className="h-5 w-5" />, text: "5-Star Reviews" }
-  ];
-
-  return (
-    <main className="overflow-hidden">
+  const trustBadges = [{
+    icon: <Award className="h-5 w-5" />,
+    text: "Licensed & Insured"
+  }, {
+    icon: <Clock className="h-5 w-5" />,
+    text: "10+ Years Experience"
+  }, {
+    icon: <CheckCircle className="h-5 w-5" />,
+    text: "Quality Guarantee"
+  }, {
+    icon: <Star className="h-5 w-5" />,
+    text: "5-Star Reviews"
+  }];
+  return <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative bg-primary py-20 md:py-32">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <img
-            src="/Privacy/Resized_20220717_202221.jpeg"
-            alt="Professional fencing services in Tulsa, Oklahoma"
-            className="w-full h-full object-cover"
-          />
+          <img src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
           {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
         <div className="container-custom relative z-20">
-          <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="accent-badge mb-4 inline-block bg-accent/20 text-primary">
-              Our Services
-            </span>
+          <div className="max-w-4xl mx-auto text-center slide-up" style={{
+          animationDelay: '0.1s'
+        }}>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Expert Fencing & Deck Solutions
             </h1>
@@ -144,12 +86,10 @@ const Services = () => {
             
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              {trustBadges.map((badge, index) => (
-                <Badge key={index} variant="outline" className="bg-white/10 text-white border-white/20 px-4 py-2">
+              {trustBadges.map((badge, index) => <Badge key={index} variant="outline" className="bg-white/10 text-white border-white/20 px-4 py-2">
                   {badge.icon}
                   <span className="ml-2">{badge.text}</span>
-                </Badge>
-              ))}
+                </Badge>)}
             </div>
           </div>
         </div>
@@ -158,7 +98,9 @@ const Services = () => {
       {/* Services Showcase Grid */}
       <section className="py-20 bg-gradient-to-b from-white to-secondary/30">
         <div className="container-custom">
-          <div className="text-center mb-16 slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="text-center mb-16 slide-up" style={{
+          animationDelay: '0.2s'
+        }}>
             <span className="accent-badge mb-4 inline-block">What We Offer</span>
             <h2 className="section-title">Our Premium Services</h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-600">
@@ -169,13 +111,9 @@ const Services = () => {
 
           {/* Main Services Grid - 2x2 Layout */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {services.map((service, index) => (
-              <Card 
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70 flex flex-col"
-                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-              >
+            {services.map((service, index) => <Card key={service.id} id={service.id} className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70 flex flex-col" style={{
+            animationDelay: `${0.3 + index * 0.1}s`
+          }}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
@@ -195,12 +133,10 @@ const Services = () => {
 
                     {/* Features List */}
                     <div className="grid grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm">
+                      {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm">
                           <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
                           <span>{feature}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
 
                     {/* Project Gallery Carousel */}
@@ -208,18 +144,12 @@ const Services = () => {
                       <h4 className="font-semibold mb-3 text-primary">Recent Projects</h4>
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {service.gallery.map((image, imageIndex) => (
-                            <CarouselItem key={imageIndex} className="basis-1/2">
+                          {service.gallery.map((image, imageIndex) => <CarouselItem key={imageIndex} className="basis-1/2">
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <img
-                                  src={image}
-                                  alt={`${service.title} project ${imageIndex + 1}`}
-                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                />
+                                <img src={image} alt={`${service.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                               </div>
-                            </CarouselItem>
-                          ))}
+                            </CarouselItem>)}
                         </CarouselContent>
                         <CarouselPrevious className="left-2" />
                         <CarouselNext className="right-2" />
@@ -231,7 +161,9 @@ const Services = () => {
                   <div className="pt-4 mt-auto">
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild className="flex-1 btn-primary">
-                        <Link to="/quote" state={{ service: service.id }}>
+                        <Link to="/quote" state={{
+                      service: service.id
+                    }}>
                           Get Free Estimate
                         </Link>
                       </Button>
@@ -243,17 +175,14 @@ const Services = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Pre-Stained Fencing - Full Width Card */}
           <div className="mb-16">
-            <Card 
-              id={preStainedService.id}
-              className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70"
-              style={{ animationDelay: '0.7s' }}
-            >
+            <Card id={preStainedService.id} className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70" style={{
+            animationDelay: '0.7s'
+          }}>
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-full bg-primary/10 text-primary">
@@ -275,18 +204,18 @@ const Services = () => {
 
                     {/* Features List - 2 columns for better layout */}
                     <div className="grid grid-cols-2 gap-2">
-                      {preStainedService.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm">
+                      {preStainedService.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm">
                           <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
                           <span>{feature}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
 
                     {/* CTA Section */}
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
                       <Button asChild className="flex-1 btn-primary">
-                        <Link to="/quote" state={{ service: preStainedService.id }}>
+                        <Link to="/quote" state={{
+                        service: preStainedService.id
+                      }}>
                           Get Free Estimate
                         </Link>
                       </Button>
@@ -303,18 +232,12 @@ const Services = () => {
                     <h4 className="font-semibold mb-3 text-primary">Recent Projects</h4>
                     <Carousel className="w-full">
                       <CarouselContent>
-                        {preStainedService.gallery.map((image, imageIndex) => (
-                          <CarouselItem key={imageIndex} className="basis-1/2">
+                        {preStainedService.gallery.map((image, imageIndex) => <CarouselItem key={imageIndex} className="basis-1/2">
                             <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                              <img
-                                src={image}
-                                alt={`${preStainedService.title} project ${imageIndex + 1}`}
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                              />
+                              <img src={image} alt={`${preStainedService.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                             </div>
-                          </CarouselItem>
-                        ))}
+                          </CarouselItem>)}
                       </CarouselContent>
                       <CarouselPrevious className="left-2" />
                       <CarouselNext className="right-2" />
@@ -326,11 +249,11 @@ const Services = () => {
           </div>
 
           {/* Testimonial Pull-Quote */}
-          <div className="bg-primary/5 rounded-lg p-8 text-center slide-up" style={{ animationDelay: '0.8s' }}>
+          <div className="bg-primary/5 rounded-lg p-8 text-center slide-up" style={{
+          animationDelay: '0.8s'
+        }}>
             <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
             </div>
             <blockquote className="text-xl font-medium text-gray-800 mb-4">
               "I wouldn't hesitate to recommend Omni Fence to a friend or relative. Everything on the proposal was just as the job was completed. The installer kept the area clean and the fences look great. These guys have pride in their work."
@@ -359,8 +282,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Services;
