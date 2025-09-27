@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Locations from "./pages/Locations";
 import Quote from "./pages/Quote";
+import Gallery from "./pages/Gallery";
 import LocationTemplate from "./pages/LocationTemplate";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/services" element={<Services />} />
               <Route path="/locations" element={<Locations />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/quote" element={<Quote />} />
               <Route path="/locations/template" element={<LocationTemplate />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

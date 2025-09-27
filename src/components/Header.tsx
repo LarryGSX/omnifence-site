@@ -55,6 +55,7 @@ const Header = () => {
             {/* Desktop Navigation - Centered between logo and CTA */}
             <nav className="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
               <Link to="/services" className="font-medium hover:text-primary transition-colors" onClick={handleNavClick}>Services</Link>
+              <Link to="/gallery" className="font-medium hover:text-primary transition-colors" onClick={handleNavClick}>Gallery</Link>
               <Link to="/locations" className="font-medium hover:text-primary transition-colors" onClick={handleNavClick}>Locations</Link>
             </nav>
 
@@ -103,6 +104,7 @@ const Header = () => {
             </div>
             <nav className="flex flex-col space-y-6 text-lg font-medium">
               <Link to="/services" className="hover:text-primary transition-colors" onClick={handleNavClick}>Services</Link>
+              <Link to="/gallery" className="hover:text-primary transition-colors" onClick={handleNavClick}>Gallery</Link>
               <Link to="/locations" className="hover:text-primary transition-colors" onClick={handleNavClick}>Locations</Link>
             </nav>
             <div className="mt-auto">
