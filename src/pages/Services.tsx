@@ -72,12 +72,19 @@ const Services = () => {
     <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/Hero_Image_3.jpg')" }}
-        ></div>
-        <div className="container-custom relative z-20 h-full flex items-center justify-center">
+        {/* Background Image - Restored to full vibrancy */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/Hero_Image_3.jpg"
+            alt="Professional fence installation in Tulsa, Oklahoma"
+            className="w-full h-full object-cover"
+          />
+          {/* Minimal gradient overlay only at bottom for text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Content Container */}
+        <div className="container-custom relative z-30 h-full flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
             <span className="accent-badge mb-4 inline-block bg-accent/20 text-white">
               Our Services
