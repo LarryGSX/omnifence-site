@@ -221,7 +221,7 @@ const Gallery = () => {
       )}
 
       {/* CTA Section */}
-      <div className="bg-white py-16">
+      <div className="bg-gray-50 py-16">
         <div className="container-custom text-center">
           <h2 className="text-3xl font-heading font-bold mb-4 text-primary">
             Ready to Start Your Project?
