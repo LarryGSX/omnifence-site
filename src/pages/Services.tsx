@@ -120,11 +120,12 @@ const Services = () => {
     <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative bg-primary py-20 md:py-32">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/Hero_Image_3.jpg')" }}
         ></div>
+        {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
         <div className="container-custom relative z-20">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
             <span className="accent-badge mb-4 inline-block bg-accent/20 text-white">
