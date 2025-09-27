@@ -71,13 +71,13 @@ const Services = () => {
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-primary py-20 md:py-32">
+      <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/Hero_Image_11.jpg')" }}
+          style={{ backgroundImage: "url('/Hero_Image_3.jpg')" }}
         ></div>
-        <div className="container-custom relative z-20">
+        <div className="container-custom relative z-20 h-full flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
             <span className="accent-badge mb-4 inline-block bg-accent/20 text-white">
               Our Services
