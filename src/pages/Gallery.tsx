@@ -221,12 +221,12 @@ const Gallery = () => {
       )}
 
       {/* CTA Section */}
-      <div className="bg-primary text-white py-16">
+      <div className="bg-white py-16">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-heading font-bold mb-4">
+          <h2 className="text-3xl font-heading font-bold mb-4 text-primary">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Let us bring your vision to life with our expert craftsmanship and quality materials.
           </p>
           <Button asChild size="lg" className="btn-accent">
