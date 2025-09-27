@@ -196,19 +196,19 @@ const LocationTemplate = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "The team at Omni Fence did an amazing job on our backyard fence. They were professional, efficient, and the quality of work exceeded our expectations.",
-                name: "John D.",
-                role: "[Location Name] Homeowner"
+                quote: "Omni Fence replaced our entire fence last year. We've been very happy with their work over the intervening year. Highly recommend them!",
+                name: "Elliott Ridgway",
+                role: "Homeowner"
               },
               {
-                quote: "From initial consultation to completion, Omni Fence was a pleasure to work with. Our new privacy fence is exactly what we wanted and has completely transformed our yard.",
-                name: "Lisa M.",
-                role: "[Location Name] Resident"
+                quote: "Omni Fence replaced a worn section of fence for me. Easy to get a quote, easy to get scheduled, and great workmanship. They also beat other places on price so win/win/win! I will use them again for my next replacement.",
+                name: "Scott Persson",
+                role: "Residential Client"
               },
               {
-                quote: "As a business owner in [Location Name], I needed a secure, professional fence installed quickly. Omni Fence delivered on time, on budget, and with outstanding results.",
-                name: "Robert J.",
-                role: "Local Business Owner"
+                quote: "I've dealt with Omni for years on various jobs in a professional context. They do great work, and are always the company I refer to my customers needing a fence built, modified, or repaired.",
+                name: "Nick Carson",
+                role: "Professional Contractor"
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-8 hover-scale transition-all duration-300 slide-up" style={{ animationDelay: `${0.4 + index * 0.1}s` }}>

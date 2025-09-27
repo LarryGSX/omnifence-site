@@ -38,19 +38,24 @@ const Testimonial = ({ quote, author, location }: TestimonialProps) => {
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Omni Fence delivered exceptional quality and service. Our new fence not only looks beautiful but was completed ahead of schedule. Highly recommended!",
-      author: "Michael R.",
+      quote: "Omni Fence replaced our entire fence last year. We've been very happy with their work over the intervening year. Highly recommend them!",
+      author: "Elliott Ridgway",
       location: "Homeowner"
     },
     {
-      quote: "Professional from start to finish. The team was courteous, knowledgeable, and the workmanship is outstanding. Our new deck has transformed our backyard.",
-      author: "Sarah T.",
+      quote: "Omni Fence replaced a worn section of fence for me. Easy to get a quote, easy to get scheduled, and great workmanship. They also beat other places on price so win/win/win! I will use them again for my next replacement.",
+      author: "Scott Persson",
       location: "Residential Client"
     },
     {
-      quote: "As a commercial property manager, I've worked with many contractors. Omni Fence stands out for their reliability, attention to detail, and excellent communication.",
-      author: "David L.",
-      location: "Property Manager"
+      quote: "I wouldn't hesitate to recommend Omni Fence to a friend or relative. Everything on the proposal was just as the job was completed. The installer kept the area clean and the fences look great. These guys have pride in their work.",
+      author: "Scott Burch",
+      location: "Homeowner"
+    },
+    {
+      quote: "I've dealt with Omni for years on various jobs in a professional context. They do great work, and are always the company I refer to my customers needing a fence built, modified, or repaired.",
+      author: "Nick Carson",
+      location: "Professional Contractor"
     }
   ];
 

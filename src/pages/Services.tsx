@@ -78,7 +78,7 @@ const Services = () => {
       title: "Gates & Gate Operators",
       icon: <KeyRound className="h-8 w-8" />,
       description: "Experience the perfect combination of security and convenience with our automated gate systems. From elegant residential entry gates to heavy-duty commercial access controls, we provide complete gate solutions including installation, automation, and ongoing maintenance.",
-      features: ["Automated Systems", "Remote Access", "Security Integration", "24/7 Support"],
+      features: ["Automated Systems", "Remote Access", "Security Integration", "Professional Installation"],
       gallery: gatesImages
     }
   ];
@@ -229,10 +229,9 @@ const Services = () => {
               ))}
             </div>
             <blockquote className="text-xl font-medium text-gray-800 mb-4">
-              "Omni Fence transformed our backyard with a beautiful custom deck and privacy fence. 
-              The quality is outstanding and the team was professional throughout the entire process."
+              "I wouldn't hesitate to recommend Omni Fence to a friend or relative. Everything on the proposal was just as the job was completed. The installer kept the area clean and the fences look great. These guys have pride in their work."
             </blockquote>
-            <cite className="text-primary font-semibold">- Sarah M., Tulsa Homeowner</cite>
+            <cite className="text-primary font-semibold">- Scott Burch, Satisfied Customer</cite>
           </div>
         </div>
       </section>
