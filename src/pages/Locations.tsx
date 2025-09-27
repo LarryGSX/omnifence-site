@@ -146,30 +146,26 @@ const Locations = () => {
         }}>
             
             <h2 className="section-title">Our Service Locations</h2>
-            <p className="text-lg max-w-3xl mx-auto text-gray-600">
-              Professional fencing and deck installation services throughout the Greater Tulsa metropolitan area and surrounding communities.
-            </p>
+            <p className="text-lg max-w-3xl mx-auto text-gray-600">Professional fencing and deck installation services throughout the Greater Tulsa metropolitan area and surrounding communities.
+
+We also serve communities and rural areas within our service radius not listed below. Contact us to confirm service availability in your location.</p>
           </div>
 
           {/* Service Locations - Clean List Style */}
           <div className="max-w-4xl mx-auto mb-12">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
-                {locations.map((location, index) => (
-                  <div key={location.id} className="flex items-center" style={{
-                    animationDelay: `${0.3 + index * 0.05}s`
-                  }}>
+                {locations.map((location, index) => <div key={location.id} className="flex items-center" style={{
+                animationDelay: `${0.3 + index * 0.05}s`
+              }}>
                     <MapPin className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
                     <span className={`font-medium ${location.isHeadquarters ? 'text-primary font-semibold' : 'text-gray-700'}`}>
                       {location.city}
-                      {location.isHeadquarters && (
-                        <Badge className="ml-2 bg-primary text-white text-xs px-2 py-0.5">
+                      {location.isHeadquarters && <Badge className="ml-2 bg-primary text-white text-xs px-2 py-0.5">
                           HQ
-                        </Badge>
-                      )}
+                        </Badge>}
                     </span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -178,10 +174,7 @@ const Locations = () => {
           <div className="bg-white/80 rounded-lg p-6 text-center mb-8 slide-up" style={{
           animationDelay: '0.8s'
         }}>
-            <p className="text-gray-600 text-sm">
-              <strong>Plus surrounding areas:</strong> We also serve communities and rural areas within our service radius. 
-              Contact us to confirm service availability in your specific location.
-            </p>
+            
           </div>
 
           {/* Contact Section for Unlisted Areas */}
