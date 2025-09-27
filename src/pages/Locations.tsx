@@ -151,61 +151,32 @@ const Locations = () => {
             </p>
           </div>
 
-          {/* Service Locations Grid - Clean Badge Style */}
+          {/* Service Locations - Clean List Style */}
           <div className="max-w-4xl mx-auto mb-12">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {locations.map((location, index) => (
-                <div key={location.id} className={`
-                  relative p-4 rounded-lg border-2 transition-all duration-300 text-center
-                  ${location.isHeadquarters 
-                    ? 'border-accent bg-gradient-to-br from-accent/10 to-primary/10 shadow-lg' 
-                    : 'border-gray-200 bg-white hover:border-primary/50 hover:shadow-md'
-                  }
-                `} style={{
-                  animationDelay: `${0.3 + index * 0.05}s`
-                }}>
-                  {location.isHeadquarters && (
-                    <div className="absolute -top-2 -right-2">
-                      <Badge className="bg-primary text-white font-semibold text-xs">
-                        <Star className="h-3 w-3 mr-1" />
-                        HQ
-                      </Badge>
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-center mb-2">
-                    <MapPin className="h-4 w-4 text-primary mr-2" />
-                    <span className={`font-semibold ${location.isHeadquarters ? 'text-primary' : 'text-gray-800'}`}>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
+                {locations.map((location, index) => (
+                  <div key={location.id} className="flex items-center" style={{
+                    animationDelay: `${0.3 + index * 0.05}s`
+                  }}>
+                    <MapPin className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
+                    <span className={`font-medium ${location.isHeadquarters ? 'text-primary font-semibold' : 'text-gray-700'}`}>
                       {location.city}
+                      {location.isHeadquarters && (
+                        <Badge className="ml-2 bg-primary text-white text-xs px-2 py-0.5">
+                          HQ
+                        </Badge>
+                      )}
                     </span>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Single CTA for All Locations */}
-          <div className="text-center mb-12">
-            <div className="bg-white rounded-lg p-8 shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-xl font-heading font-bold text-primary mb-4">
-                Ready to Get Started?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Contact us for a free estimate on your fencing or deck project in any of our service areas.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="btn-primary">
-                  <Link to="/quote">Get Free Quote</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="tel:9181234567">Call (918) 123-4567</a>
-                </Button>
+                ))}
               </div>
             </div>
           </div>
 
+
           {/* Additional Coverage Note */}
-          <div className="bg-white/80 rounded-lg p-6 text-center mb-12 slide-up" style={{
+          <div className="bg-white/80 rounded-lg p-6 text-center mb-16 slide-up" style={{
           animationDelay: '0.8s'
         }}>
             <p className="text-gray-600 text-sm">
@@ -213,25 +184,27 @@ const Locations = () => {
               Contact us to confirm service availability in your specific location.
             </p>
           </div>
+        </div>
+      </section>
 
-          {/* Contact Section for Unlisted Areas */}
-          <div className="bg-white rounded-lg shadow-lg slide-up max-w-5xl mx-auto" style={{
+      {/* Contact Section for Unlisted Areas */}
+      <section className="py-16 bg-gradient-to-b from-secondary/30 to-white">
+        <div className="container-custom">
+          <div className="text-center mb-8 slide-up" style={{
           animationDelay: '0.9s'
         }}>
-            <div className="text-center px-8 pt-8 pb-2">
-              <h3 className="text-2xl font-heading font-bold text-primary mb-4">
-                Don't See Your Area Listed?
-              </h3>
-              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                We're always expanding our service areas! Contact us to see if we can serve your location. 
-                Special arrangements may be available for larger projects.
-              </p>
-            </div>
-            
-            {/* Contact Form */}
-            <div className="px-8 pb-8">
-              <ShortQuoteForm />
-            </div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+              Don't See Your Area Listed?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              We're always expanding our service areas! Contact us to see if we can serve your location. 
+              Special arrangements may be available for larger projects.
+            </p>
+          </div>
+          
+          {/* Contact Form */}
+          <div className="max-w-4xl mx-auto">
+            <ShortQuoteForm />
           </div>
         </div>
       </section>
