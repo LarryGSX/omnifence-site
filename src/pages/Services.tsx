@@ -42,10 +42,10 @@ const Services = () => {
   ];
 
   const gatesImages = [
-    "/Gates & Gate Operators/488675040_1077025164443569_4432792265416510015_n.jpg",
-    "/Gates & Gate Operators/488867158_1077025147776904_1813597507789668214_n.jpg",
-    "/Gates & Gate Operators/Attachment(81).jpg",
-    "/Gates & Gate Operators/Attachment(82).jpg"
+    "/Gates%20&%20Gate%20Operators/488675040_1077025164443569_4432792265416510015_n.jpg",
+    "/Gates%20&%20Gate%20Operators/488706680_1077025161110236_3664048956504830031_n.jpg",
+    "/Gates%20&%20Gate%20Operators/488867158_1077025147776904_1813597507789668214_n.jpg",
+    "/Gates%20&%20Gate%20Operators/Attachment(81).jpg"
   ];
 
   const services = [
