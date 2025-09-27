@@ -5,7 +5,7 @@ import type { FC } from "react";
 
 const Hero: FC = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       {/* Background Image - Restored to full vibrancy */}
       <div className="absolute inset-0 z-0">
         <img
@@ -18,7 +18,7 @@ const Hero: FC = () => {
       </div>
 
       {/* Content Container */}
-      <div className="container-custom relative z-30 h-full flex items-start justify-center min-h-screen pt-24 md:pt-32">
+      <div className="container-custom relative z-30 h-full flex items-start justify-center h-screen pt-24 md:pt-32">
         {/* Text Content - Positioned in top third to showcase fence */}
         <div className="w-full max-w-3xl text-center slide-up" style={{ animationDelay: '0.1s' }}>
           <span className="accent-badge mb-4 inline-block bg-accent text-secondary-foreground font-semibold rounded-full px-4 py-1 shadow-lg">
@@ -46,8 +46,6 @@ const Hero: FC = () => {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary to-transparent z-40"></div>
     </section>
   );
 };
