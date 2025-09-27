@@ -20,7 +20,7 @@ const photoCategories = {
     'Attachment(137).jpg',
     'Attachment(139).jpg'
   ],
-  'Gates & Gate Operators': [
+  'Gates-and-Gate-Operators': [
     '488675040_1077025164443569_4432792265416510015_n.jpg',
     '488706680_1077025161110236_3664048956504830031_n.jpg',
     '488867158_1077025147776904_1813597507789668214_n.jpg',
@@ -76,7 +76,7 @@ const Gallery = () => {
       // Return all images with their category info
       return Object.entries(photoCategories).flatMap(([category, images]) =>
         images.map(image => ({
-          src: `/${encodeURIComponent(category)}/${encodeURIComponent(image)}`,
+          src: `/${category}/${image}`,
           category,
           filename: image
         }))
@@ -84,7 +84,7 @@ const Gallery = () => {
     } else {
       // Return images from selected category
       return photoCategories[selectedCategory as keyof typeof photoCategories]?.map(image => ({
-        src: `/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(image)}`,
+        src: `/${selectedCategory}/${image}`,
         category: selectedCategory,
         filename: image
       })) || [];
