@@ -35,7 +35,7 @@ const photoCategories = {
     'IMG_5981.jpg',
     'IMG_5982.jpg',
     '../Hero_Image_8.jpeg',
-    'Resized_20220717_202221.jpeg'
+    '../Privacy/Resized_20220717_202221.jpeg'
   ],
   'Privacy': [
     '20230216_173524.jpg',

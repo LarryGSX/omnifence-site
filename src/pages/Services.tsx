@@ -50,12 +50,9 @@ const Services = () => {
   ];
 
   const preStainedImages = [
-    "/Pre-Stained/FullSizeR.jpg",
-    "/Pre-Stained/IMG_5981.jpg",
-    "/Pre-Stained/IMG_5982.jpg",
-    "/Pre-Stained/Huemiller-All-Seasons-Colors-June-2022-1000-b.png",
+    "/Privacy/Resized_20220717_202221.jpeg",
     "/Hero_Image_8.jpeg",
-    "/Privacy/Resized_20220717_202221.jpeg"
+    "/Pre-Stained/IMG_5981.jpg"
   ];
 
   const services = [
