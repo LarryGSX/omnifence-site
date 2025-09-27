@@ -50,17 +50,23 @@ const Quote = () => {
       <section className="py-12">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <iframe 
-              data-tally-src="https://tally.so/embed/wQLpv1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-              loading="lazy" 
-              width="100%" 
-              height={587} 
-              frameBorder={0} 
-              marginHeight={0} 
-              marginWidth={0} 
-              title="Request a Quote"
-              className="rounded-lg shadow-xl"
-            />
+            <div className="bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
+              <iframe 
+                data-tally-src="https://tally.so/embed/wQLpv1?alignLeft=1&transparentBackground=1&dynamicHeight=1" 
+                loading="lazy" 
+                width="100%" 
+                height={587} 
+                frameBorder={0} 
+                marginHeight={0} 
+                marginWidth={0} 
+                title="Request a Quote"
+                className="rounded-lg"
+                style={{ 
+                  border: 'none',
+                  borderRadius: '8px'
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
