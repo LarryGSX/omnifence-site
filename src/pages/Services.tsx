@@ -341,19 +341,19 @@ const Services = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-gray-50">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
             Get a free consultation and personalized quote for your fencing or deck project today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
+            <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
               <a href="tel:9181234567">Call (918) 123-4567</a>
             </Button>
           </div>

@@ -22,7 +22,7 @@ const LocationCTA = () => {
               We provide professional fencing and deck services in multiple locations. 
               Visit your local page to learn more about specific services in your area.
             </p>
-            <Button asChild size="lg" className="hover-scale">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 hover-scale shadow-lg">
               <Link to="/locations" className="inline-flex items-center">
                 Find Your Location
                 <ArrowRight className="ml-2 h-5 w-5" />

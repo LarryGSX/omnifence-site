@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -223,15 +224,20 @@ const Gallery = () => {
       {/* CTA Section */}
       <div className="bg-gray-50 py-16">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-heading font-bold mb-4 text-primary">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Let us bring your vision to life with our expert craftsmanship and quality materials.
           </p>
-          <Button asChild size="lg" className="btn-accent">
-            <a href="/quote">Get Your Free Quote</a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link to="/quote">Get Free Quote</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
+              <a href="tel:9181234567">Call (918) 123-4567</a>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
