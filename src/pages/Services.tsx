@@ -120,7 +120,7 @@ const Services = () => {
               <Card 
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-accent hover:border-primary"
+                className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-accent hover:border-primary flex flex-col"
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <CardHeader className="pb-4">
@@ -139,46 +139,48 @@ const Services = () => {
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
-                  <CardDescription className="text-base leading-relaxed text-gray-700">
-                    {service.description}
-                  </CardDescription>
+                <CardContent className="flex flex-col h-full">
+                  <div className="flex-grow space-y-6">
+                    <CardDescription className="text-base leading-relaxed text-gray-700">
+                      {service.description}
+                    </CardDescription>
 
-                  {/* Features List */}
-                  <div className="grid grid-cols-2 gap-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm">
-                        <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
+                    {/* Features List */}
+                    <div className="grid grid-cols-2 gap-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm">
+                          <CheckCircle className="h-4 w-4 text-accent mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Project Gallery Carousel */}
+                    <div className="relative">
+                      <h4 className="font-semibold mb-3 text-primary">Recent Projects</h4>
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {service.gallery.map((image, imageIndex) => (
+                            <CarouselItem key={imageIndex} className="basis-1/2">
+                              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                                <img
+                                  src={image}
+                                  alt={`${service.title} project ${imageIndex + 1}`}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2" />
+                        <CarouselNext className="right-2" />
+                      </Carousel>
+                    </div>
                   </div>
 
-                  {/* Project Gallery Carousel */}
-                  <div className="relative">
-                    <h4 className="font-semibold mb-3 text-primary">Recent Projects</h4>
-                    <Carousel className="w-full">
-                      <CarouselContent>
-                        {service.gallery.map((image, imageIndex) => (
-                          <CarouselItem key={imageIndex} className="basis-1/2">
-                            <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                              <img
-                                src={image}
-                                alt={`${service.title} project ${imageIndex + 1}`}
-                                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="left-2" />
-                      <CarouselNext className="right-2" />
-                    </Carousel>
-                  </div>
-
-                  {/* CTA Section */}
-                  <div className="pt-4 border-t border-gray-200">
+                  {/* CTA Section - Fixed at bottom */}
+                  <div className="pt-4 border-t border-gray-200 mt-auto">
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild className="flex-1 btn-primary">
                         <Link to="/quote" state={{ service: service.id }}>
@@ -186,8 +188,8 @@ const Services = () => {
                         </Link>
                       </Button>
                       <Button asChild variant="outline" className="flex-1">
-                        <Link to="/quote">
-                          Learn More
+                        <Link to="/gallery">
+                          See Gallery
                         </Link>
                       </Button>
                     </div>
