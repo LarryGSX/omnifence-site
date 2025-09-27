@@ -53,7 +53,9 @@ const Services = () => {
     "/Pre-Stained/FullSizeR.jpg",
     "/Pre-Stained/IMG_5981.jpg",
     "/Pre-Stained/IMG_5982.jpg",
-    "/Pre-Stained/Huemiller-All-Seasons-Colors-June-2022-1000-b.png"
+    "/Pre-Stained/Huemiller-All-Seasons-Colors-June-2022-1000-b.png",
+    "/Hero_Image_8.jpeg",
+    "/Privacy/Resized_20220717_202221.jpeg"
   ];
 
   const services = [
@@ -123,7 +125,7 @@ const Services = () => {
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/Hero_Image_11.jpg"
+            src="/Privacy/Resized_20220717_202221.jpeg"
             alt="Professional fencing services in Tulsa, Oklahoma"
             className="w-full h-full object-cover"
           />

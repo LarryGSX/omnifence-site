@@ -11,7 +11,8 @@ const photoCategories = {
     '490654144_1083822673763818_6407982423294302308_n.jpg',
     '490754914_1085024603643625_8266391198350655194_n.jpg',
     '491509820_1083822503763835_8302664543931386057_n.jpg',
-    'FB_IMG_1660151993717.jpg'
+    'FB_IMG_1660151993717.jpg',
+    '../Hero_Image_12.jpg'
   ],
   'Commercial': [
     '488519825_1077025151110237_580836037559699280_n.jpg',
@@ -32,7 +33,9 @@ const photoCategories = {
     'Huemiller-All-Seasons-Colors-June-2022-1000-b 2.png',
     'Huemiller-All-Seasons-Colors-June-2022-1000-b.png',
     'IMG_5981.jpg',
-    'IMG_5982.jpg'
+    'IMG_5982.jpg',
+    '../Hero_Image_8.jpeg',
+    'Resized_20220717_202221.jpeg'
   ],
   'Privacy': [
     '20230216_173524.jpg',
@@ -46,7 +49,9 @@ const photoCategories = {
     'Attachment(81).jpg',
     'Attachment(98).jpg',
     'IMG_20230802_110624722(1).jpg',
-    'Resized_20220717_202221.jpeg'
+    '../Hero_Image_1.jpg',
+    '../Hero_Image_9.jpeg',
+    '../Hero_Image_11.jpg'
   ],
   'Round Rail': [
     'Attachment(88).jpg',
