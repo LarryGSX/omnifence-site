@@ -180,7 +180,7 @@ const Services = () => {
                   </div>
 
                   {/* CTA Section - Fixed at bottom */}
-                  <div className="pt-4 border-t border-gray-200 mt-auto">
+                  <div className="pt-4 mt-auto">
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild className="flex-1 btn-primary">
                         <Link to="/quote" state={{ service: service.id }}>
