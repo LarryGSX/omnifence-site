@@ -173,19 +173,14 @@ const Services = () => {
                 style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
                       {service.icon}
                     </div>
-                    <Button asChild className="btn-accent">
-                      <Link to="/quote" state={{ service: service.id }}>
-                        Get Quote
-                      </Link>
-                    </Button>
+                    <CardTitle className="text-2xl font-heading text-primary">
+                      {service.title}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="text-2xl font-heading text-primary">
-                    {service.title}
-                  </CardTitle>
                 </CardHeader>
                 
                 <CardContent className="flex flex-col h-full">
@@ -256,19 +251,14 @@ const Services = () => {
               style={{ animationDelay: '0.7s' }}
             >
               <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-full bg-primary/10 text-primary">
                     {preStainedService.icon}
                   </div>
-                  <Button asChild className="btn-accent">
-                    <Link to="/quote" state={{ service: preStainedService.id }}>
-                      Get Quote
-                    </Link>
-                  </Button>
+                  <CardTitle className="text-2xl font-heading text-primary">
+                    {preStainedService.title}
+                  </CardTitle>
                 </div>
-                <CardTitle className="text-2xl font-heading text-primary">
-                  {preStainedService.title}
-                </CardTitle>
               </CardHeader>
               
               <CardContent>
