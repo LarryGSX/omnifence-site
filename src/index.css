@@ -66,7 +66,7 @@
   }
   
   .btn-accent {
-    @apply bg-accent text-secondary-foreground font-semibold px-6 py-3 rounded hover:bg-accent/90 transition-all;
+    @apply bg-primary text-white font-semibold px-6 py-3 rounded hover:bg-primary/90 transition-all;
   }
   
   .section-title {
@@ -91,7 +91,7 @@
   }
   
   .service-card {
-    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border-t-4 border-transparent hover:border-accent;
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg border-t-4 border-transparent hover:border-primary;
   }
   
   .testimonial-card {
@@ -112,7 +112,7 @@
   }
   
   .hover-accent {
-    @apply transition-all duration-200 hover:text-accent;
+    @apply transition-all duration-200 hover:text-primary;
   }
   
   .hover-scale {
@@ -124,7 +124,7 @@
   }
   
   .link-underline::after {
-    @apply content-[''] absolute w-0 h-[2px] bg-accent left-0 bottom-[-2px] transition-all duration-300;
+    @apply content-[''] absolute w-0 h-[2px] bg-primary left-0 bottom-[-2px] transition-all duration-300;
   }
   
   .link-underline:hover::after {

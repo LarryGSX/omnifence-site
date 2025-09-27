@@ -21,7 +21,7 @@ const Hero: FC = () => {
       <div className="container-custom relative z-30 h-full flex items-start justify-center h-screen pt-24 md:pt-32">
         {/* Text Content - Positioned in top third to showcase fence */}
         <div className="w-full max-w-3xl text-center slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="accent-badge mb-4 inline-block bg-accent text-secondary-foreground font-semibold rounded-full px-4 py-1 shadow-lg">
+          <span className="accent-badge mb-4 inline-block bg-accent/20 text-primary font-semibold rounded-full px-4 py-1 shadow-lg">
             Premier Outdoor Provider
           </span>
           {/* Enhanced text shadows and subtle backdrop for readability without dulling image */}
@@ -32,7 +32,7 @@ const Hero: FC = () => {
             Quality craftsmanship, innovative designs, and exceptional service for your residential or commercial property throughout Greater Tulsa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale shadow-lg">
+            <Button asChild size="lg" className="bg-primary text-white hover:bg-primary/90 hover-scale shadow-lg">
               <Link to="/quote" className="inline-flex items-center">
                 Get a Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />

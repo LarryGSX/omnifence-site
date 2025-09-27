@@ -92,7 +92,7 @@ const ServicesOverview = () => {
         </div>
 
         <div className="text-center fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 hover-scale">
+          <Button asChild size="lg" className="hover-scale">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>

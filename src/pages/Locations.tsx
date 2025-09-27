@@ -93,7 +93,7 @@ const Locations = () => {
         ></div>
         <div className="container-custom relative z-20">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="accent-badge mb-4 inline-block bg-accent/20 text-white">
+            <span className="accent-badge mb-4 inline-block bg-accent/20 text-primary">
               Service Areas
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
@@ -144,7 +144,7 @@ const Locations = () => {
               >
                 {location.isHeadquarters && (
                   <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-accent text-secondary-foreground font-semibold">
+                    <Badge className="bg-primary text-white font-semibold">
                       <Star className="h-4 w-4 mr-1" />
                       Headquarters
                     </Badge>
@@ -267,7 +267,7 @@ const Locations = () => {
             We're here to serve the Greater Tulsa area with quality and professionalism.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90">
+            <Button asChild size="lg">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">

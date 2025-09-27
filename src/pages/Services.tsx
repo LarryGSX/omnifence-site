@@ -131,7 +131,7 @@ const Services = () => {
         </div>
         <div className="container-custom relative z-20">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
-            <span className="accent-badge mb-4 inline-block bg-accent/20 text-white">
+            <span className="accent-badge mb-4 inline-block bg-accent/20 text-primary">
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
@@ -350,7 +350,7 @@ const Services = () => {
             Get a free consultation and personalized quote for your fencing or deck project today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90">
+            <Button asChild size="lg">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">

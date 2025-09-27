@@ -42,7 +42,7 @@ const NotFound = () => {
                     Go to Homepage
                   </Link>
                 </Button>
-                <Button asChild className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+                <Button asChild className="hover-scale">
                   <Link to="/contact" className="inline-flex items-center">
                     Contact Support
                     <ArrowLeft className="ml-2 h-5 w-5" />

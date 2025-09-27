@@ -16,7 +16,7 @@ const Footer = () => {
                 <span className="text-xl font-heading font-bold">Omni Fence & Deck</span>
               </div>
               <p className="text-white/80 mb-4 max-w-sm">
-                Tulsa's premier fencing and custom deck specialists. Quality craftsmanship and exceptional service for residential and commercial properties throughout Greater Tulsa.
+                Tulsa's premier fencing and custom deck specialists. Quality craftsmanship and exceptional service for residential and commercial properties throughout Oklahoma.
               </p>
             </div>
 
@@ -25,22 +25,22 @@ const Footer = () => {
               <h3 className="text-lg font-heading font-semibold mb-4">Our Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/services#residential-fencing" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/services#residential-fencing" className="text-white/80 hover:text-primary transition-colors">
                     Residential Fencing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#commercial-fencing" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/services#commercial-fencing" className="text-white/80 hover:text-primary transition-colors">
                     Commercial Fencing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#custom-decks" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/services#custom-decks" className="text-white/80 hover:text-primary transition-colors">
                     Custom Decks
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#gates-operators" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/services#gates-operators" className="text-white/80 hover:text-primary transition-colors">
                     Gates & Gate Operators
                   </Link>
                 </li>
@@ -53,30 +53,30 @@ const Footer = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Phone className="h-4 w-4 text-accent" />
-                  <a href="tel:9181234567" className="hover:text-accent transition-colors">
+                  <a href="tel:9181234567" className="hover:text-primary transition-colors">
                     (918) 123-4567
                   </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Mail className="h-4 w-4 text-accent" />
-                  <a href="mailto:info@omnifence.com" className="hover:text-accent transition-colors">
+                  <a href="mailto:info@omnifence.com" className="hover:text-primary transition-colors">
                     info@omnifence.com
                   </a>
                 </div>
               </div>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/services" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/services" className="text-white/80 hover:text-primary transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/locations" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/locations" className="text-white/80 hover:text-primary transition-colors">
                     Service Areas
                   </Link>
                 </li>
                 <li>
-                  <Link to="/quote" className="text-white/80 hover:text-accent transition-colors">
+                  <Link to="/quote" className="text-white/80 hover:text-primary transition-colors">
                     Get a Quote
                   </Link>
                 </li>

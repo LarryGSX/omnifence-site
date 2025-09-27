@@ -19,7 +19,7 @@ const LocationTemplate = () => {
               Professional fencing and deck solutions for [Location Name] homeowners and businesses. 
               Quality craftsmanship, exceptional service, and lasting results guaranteed.
             </p>
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+            <Button asChild size="lg" className="hover-scale">
               <Link to="/contact" className="inline-flex items-center">
                 Get a Free Quote in [Location Name]
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -172,7 +172,7 @@ const LocationTemplate = () => {
               <br />
               Contact us at [Local Phone Number] for service in this area.
             </p>
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+            <Button asChild size="lg" className="hover-scale">
               <Link to="/contact" className="inline-flex items-center">
                 Contact Our [Location Name] Team
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -240,7 +240,7 @@ const LocationTemplate = () => {
             <p className="text-xl mb-8 text-white/90">
               Contact us today for a free consultation and quote. Let's discuss how we can enhance your property with our premium fencing and deck solutions.
             </p>
-            <Button asChild size="lg" className="bg-accent text-secondary-foreground hover:bg-accent/90 hover-scale">
+            <Button asChild size="lg" className="hover-scale">
               <Link to="/contact" className="inline-flex items-center">
                 Get Your Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
