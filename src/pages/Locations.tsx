@@ -7,106 +7,91 @@ import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
 const Locations = () => {
   // Primary service locations - most work happens within 50-100 miles of Tulsa
-  const locations = [
-    {
-      id: "tulsa-ok",
-      city: "Tulsa",
-      state: "OK",
-      isHeadquarters: true,
-      description: "Our headquarters and primary service area. Full service coverage with same-day estimates available."
-    },
-    {
-      id: "bartlesville-ok",
-      city: "Bartlesville",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Professional fencing and deck services with scheduled appointments and full installation."
-    },
-    {
-      id: "bixby-ok",
-      city: "Bixby",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Complete fencing solutions with quality craftsmanship and reliable service."
-    },
-    {
-      id: "broken-arrow-ok",
-      city: "Broken Arrow",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Full-service fencing and deck installation with professional consultation."
-    },
-    {
-      id: "claremore-ok",
-      city: "Claremore",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Quality fencing services with comprehensive project support and installation."
-    },
-    {
-      id: "jenks-ok",
-      city: "Jenks",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Professional installation services with project planning and material delivery."
-    },
-    {
-      id: "muskogee-ok",
-      city: "Muskogee",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Extended service area with professional fencing and deck solutions."
-    },
-    {
-      id: "owasso-ok",
-      city: "Owasso",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Comprehensive fencing services with professional consultation and installation."
-    },
-    {
-      id: "ponca-city-ok",
-      city: "Ponca City",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Quality fencing and deck services with reliable installation and support."
-    },
-    {
-      id: "sand-springs-ok",
-      city: "Sand Springs",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Professional fencing solutions with comprehensive service and installation."
-    },
-    {
-      id: "sapulpa-ok",
-      city: "Sapulpa",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Full-service fencing and deck installation with quality craftsmanship."
-    },
-    {
-      id: "shawnee-ok",
-      city: "Shawnee",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Extended service coverage with professional installation and customer support."
-    },
-    {
-      id: "stillwater-ok",
-      city: "Stillwater",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Quality fencing services with scheduled appointments and professional installation."
-    },
-    {
-      id: "tahlequah-ok",
-      city: "Tahlequah",
-      state: "OK",
-      isHeadquarters: false,
-      description: "Professional fencing and deck services with comprehensive project support."
-    }
-  ];
+  const locations = [{
+    id: "tulsa-ok",
+    city: "Tulsa",
+    state: "OK",
+    isHeadquarters: true,
+    description: "Our headquarters and primary service area. Full service coverage with same-day estimates available."
+  }, {
+    id: "bartlesville-ok",
+    city: "Bartlesville",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Professional fencing and deck services with scheduled appointments and full installation."
+  }, {
+    id: "bixby-ok",
+    city: "Bixby",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Complete fencing solutions with quality craftsmanship and reliable service."
+  }, {
+    id: "broken-arrow-ok",
+    city: "Broken Arrow",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Full-service fencing and deck installation with professional consultation."
+  }, {
+    id: "claremore-ok",
+    city: "Claremore",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Quality fencing services with comprehensive project support and installation."
+  }, {
+    id: "jenks-ok",
+    city: "Jenks",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Professional installation services with project planning and material delivery."
+  }, {
+    id: "muskogee-ok",
+    city: "Muskogee",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Extended service area with professional fencing and deck solutions."
+  }, {
+    id: "owasso-ok",
+    city: "Owasso",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Comprehensive fencing services with professional consultation and installation."
+  }, {
+    id: "ponca-city-ok",
+    city: "Ponca City",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Quality fencing and deck services with reliable installation and support."
+  }, {
+    id: "sand-springs-ok",
+    city: "Sand Springs",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Professional fencing solutions with comprehensive service and installation."
+  }, {
+    id: "sapulpa-ok",
+    city: "Sapulpa",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Full-service fencing and deck installation with quality craftsmanship."
+  }, {
+    id: "shawnee-ok",
+    city: "Shawnee",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Extended service coverage with professional installation and customer support."
+  }, {
+    id: "stillwater-ok",
+    city: "Stillwater",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Quality fencing services with scheduled appointments and professional installation."
+  }, {
+    id: "tahlequah-ok",
+    city: "Tahlequah",
+    state: "OK",
+    isHeadquarters: false,
+    description: "Professional fencing and deck services with comprehensive project support."
+  }];
   const serviceHighlights = [{
     icon: <CheckCircle className="h-5 w-5" />,
     text: "Licensed & Insured"
@@ -227,10 +212,7 @@ const Locations = () => {
               <h3 className="text-2xl font-heading font-bold text-primary mb-4">
                 Don't See Your Area Listed?
               </h3>
-              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                We're always expanding our service areas! Contact us to see if we can serve your location. 
-                Special arrangements may be available for larger projects.
-              </p>
+              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">We're always expanding our service areas! Contact us to see if we can serve your location.</p>
             </div>
             
             {/* Contact Form */}
