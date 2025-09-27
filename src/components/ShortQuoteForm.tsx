@@ -34,7 +34,7 @@ const ShortQuoteForm = () => {
     <section className="py-16 bg-gradient-to-b from-white via-secondary/30 to-white">
       <div className="container-custom">
         {/* Header Section */}
-        <div className="max-w-2xl mx-auto text-center mb-8">
+        <div className="max-w-4xl mx-auto text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
             Get in Touch
           </h2>
@@ -44,7 +44,7 @@ const ShortQuoteForm = () => {
         </div>
 
         {/* Form Container */}
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
             <iframe 
               data-tally-src="https://tally.so/embed/w45Rzr?alignLeft=1&transparentBackground=1&dynamicHeight=1" 
