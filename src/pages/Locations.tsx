@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
+import OptimizedImage from "@/components/OptimizedImage";
 const Locations = () => {
   // Primary service locations - most work happens within 50-100 miles of Tulsa
   const locations = [{
@@ -110,7 +111,7 @@ const Locations = () => {
       <section className="relative bg-primary py-20 md:py-28">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <img src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+          <OptimizedImage src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
           {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>

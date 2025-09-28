@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import OptimizedImage from '@/components/OptimizedImage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
-              <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
+              <OptimizedImage src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
               <span className="text-xl font-heading font-bold text-primary">Omni Fence & Deck</span>
             </Link>
 
@@ -91,7 +92,7 @@ const Header = () => {
           <div className="flex flex-col h-full p-6">
             <div className="flex justify-between items-center mb-8">
               <Link to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
-                <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
+                <OptimizedImage src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
                 <span className="text-xl font-heading font-bold text-primary">Omni Fence & Deck</span>
               </Link>
               <button 

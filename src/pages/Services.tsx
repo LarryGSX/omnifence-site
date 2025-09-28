@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 const Services = () => {
   // Service-specific project images
   const residentialImages = ["/Privacy/Attachment(104).jpg", "/Privacy/20230509_173703.jpg", "/Privacy/Attachment(102).jpg", "/Privacy/IMG_20230802_110624722(1).jpg", "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg", "/Ameristar/1000002894(1).jpg", "/Round Rail/Attachment(95).jpg"];
@@ -67,7 +68,7 @@ const Services = () => {
       <section className="relative bg-primary py-20 md:py-32">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <img src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+          <OptimizedImage src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
           {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
@@ -146,7 +147,7 @@ const Services = () => {
                         <CarouselContent>
                           {service.gallery.map((image, imageIndex) => <CarouselItem key={imageIndex} className="basis-1/2">
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <img src={image} alt={`${service.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                <OptimizedImage src={image} alt={`${service.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                               </div>
                             </CarouselItem>)}

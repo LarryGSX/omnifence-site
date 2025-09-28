@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import type { FC } from "react";
+import OptimizedImage from "@/components/OptimizedImage";
 const Hero: FC = () => {
   return <section className="relative h-screen overflow-hidden">
       {/* Background Image - Restored to full vibrancy */}
       <div className="absolute inset-0 z-0">
-        <img src="/Hero_Image_11.jpg" alt="Professional fence installation in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+        <OptimizedImage src="/Hero_Image_11.jpg" alt="Professional fence installation in Tulsa, Oklahoma" className="w-full h-full object-cover" />
         {/* Minimal gradient overlay only at bottom for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
       </div>
