@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
 const Services = () => {
   // Service-specific project images
-  const residentialImages = ["/Privacy/Attachment(104).jpg", "/Privacy/20230509_173703.jpg", "/Privacy/Attachment(102).jpg", "/Privacy/IMG_20230802_110624722(1).jpg", "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg", "/Ameristar/1000002894(1).jpg", "/Round Rail/Attachment(95).jpg"];
+  const residentialImages = ["/Privacy/Attachment(104).jpg", "/Privacy/20230509_173703.jpg", "/Privacy/Attachment(102).jpg", "/Privacy/IMG_20230802_110624722(1).jpg", "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg", "/Ameristar/1000002894(1).jpg", "/Round%20Rail/Attachment(95).jpg"];
   const commercialImages = ["/Commercial/488519825_1077025151110237_580836037559699280_n.jpg", "/Commercial/488544588_1077025094443576_7595472113235010536_n.jpg", "/Commercial/488962114_1077025047776914_537378424244966229_n.jpg", "/Commercial/Attachment(137).jpg"];
   const customDeckImages = ["/Hero_Image_3.jpg", "/Hero_Image_4.jpg", "/Hero_Image_5.jpg", "/Hero_Image_6.jpg"];
   const gatesImages = ["/Gates-and-Gate-Operators/488675040_1077025164443569_4432792265416510015_n.jpg", "/Gates-and-Gate-Operators/488706680_1077025161110236_3664048956504830031_n.jpg", "/Gates-and-Gate-Operators/488867158_1077025147776904_1813597507789668214_n.jpg", "/Gates-and-Gate-Operators/Attachment(81).jpg"];

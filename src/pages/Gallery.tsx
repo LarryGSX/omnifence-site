@@ -82,7 +82,7 @@ const Gallery = () => {
       // Return all images with their category info
       return Object.entries(photoCategories).flatMap(([category, images]) =>
         images.map(image => ({
-          src: `/${category}/${image}`,
+          src: `/${encodeURIComponent(category)}/${encodeURIComponent(image)}`,
           category,
           filename: image
         }))
@@ -90,7 +90,7 @@ const Gallery = () => {
     } else {
       // Return images from selected category
       return photoCategories[selectedCategory as keyof typeof photoCategories]?.map(image => ({
-        src: `/${selectedCategory}/${image}`,
+        src: `/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(image)}`,
         category: selectedCategory,
         filename: image
       })) || [];
