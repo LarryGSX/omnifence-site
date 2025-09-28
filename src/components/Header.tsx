@@ -88,7 +88,7 @@ const Header = () => {
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <div className="flex flex-col h-full p-6">
+          <div className="flex flex-col h-full p-6 pt-16">
             <div className="flex justify-between items-center mb-8">
               <Link to="/" className="flex items-center space-x-2" onClick={handleNavClick}>
                 <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
