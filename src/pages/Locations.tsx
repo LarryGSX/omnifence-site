@@ -191,7 +191,7 @@ We also serve communities and rural areas within our service radius not listed b
           </div>
           
           {/* Contact Form */}
-          <div className="max-w-4xl mx-auto -mt-12">
+          <div className="max-w-4xl mx-auto">
             <ShortQuoteForm />
           </div>
         </div>

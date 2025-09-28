@@ -25,8 +25,21 @@ const Index = () => {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <section aria-label="Quick Quote Form" className="py-8">
-        <ShortQuoteForm />
+      <section aria-label="Quick Quote Form" className="py-16 bg-gradient-to-b from-white via-secondary/30 to-white">
+        <div className="container-custom">
+          {/* Header Section */}
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Provide your information and we'll get in touch with you about your question or request.
+            </p>
+          </div>
+          
+          {/* Form */}
+          <ShortQuoteForm />
+        </div>
       </section>
       <section aria-label="Services Overview" className="relative py-16">
         <ServicesOverview />
