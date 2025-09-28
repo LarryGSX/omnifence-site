@@ -43,7 +43,7 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="w-full bg-white shadow-sm sticky top-10 z-[100]">
+      <header className="w-full bg-white shadow-sm sticky top-[44px] md:top-10 z-[100]">
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -84,7 +84,7 @@ const Header = () => {
         {/* Mobile Menu */}
         <div 
           className={cn(
-            "fixed inset-y-0 right-0 z-50 w-full bg-white transform transition-transform duration-300 ease-in-out md:hidden",
+            "fixed inset-y-0 right-0 z-[102] w-full bg-white transform transition-transform duration-300 ease-in-out md:hidden",
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
