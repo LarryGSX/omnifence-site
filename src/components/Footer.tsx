@@ -53,14 +53,14 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="tel:9181234567" className="hover:text-primary transition-colors">
-                    (918) 123-4567
+                  <a href="tel:9187083668" className="hover:text-primary transition-colors">
+                    (918) 708-3668
                   </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="mailto:info@omnifence.com" className="hover:text-primary transition-colors">
-                    info@omnifence.com
+                  <a href="mailto:sales@omnifence.net" className="hover:text-primary transition-colors">
+                    sales@omnifence.net
                   </a>
                 </div>
               </div>

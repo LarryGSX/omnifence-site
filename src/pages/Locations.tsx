@@ -209,7 +209,7 @@ We also serve communities and rural areas within our service radius not listed b
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
-              <a href="tel:9181234567">Call (918) 123-4567</a>
+              <a href="tel:9187083668">Call (918) 708-3668</a>
             </Button>
           </div>
         </div>
