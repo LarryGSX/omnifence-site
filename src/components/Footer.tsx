@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,80 +8,61 @@ const Footer = () => {
   return (
     <footer className="bg-secondary-foreground text-white pt-12 pb-6">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
             {/* Company Info */}
-            <div className="flex flex-col items-center md:items-start">
+            <div className="md:col-span-2 flex flex-col items-center md:items-start">
               <div className="flex items-center space-x-2 mb-4">
                 <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
                 <span className="text-xl font-heading font-bold">Omni Fence & Deck</span>
               </div>
-              <p className="text-white/80 mb-4 max-w-sm">
+              <p className="text-white/80 mb-6 max-w-md">
                 Tulsa's premier fencing and custom deck specialists. Quality craftsmanship and exceptional service for residential and commercial properties throughout Oklahoma.
               </p>
+              <Button asChild className="btn-accent w-fit">
+                <Link to="/quote">Get a Quote</Link>
+              </Button>
             </div>
 
-            {/* Services */}
+            {/* Quick Links */}
             <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-lg font-heading font-semibold mb-4">Our Services</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/services#residential-fencing" className="text-white/80 hover:text-primary transition-colors">
-                    Residential Fencing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services#commercial-fencing" className="text-white/80 hover:text-primary transition-colors">
-                    Commercial Fencing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services#custom-decks" className="text-white/80 hover:text-primary transition-colors">
-                    Custom Decks
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services#gates-operators" className="text-white/80 hover:text-primary transition-colors">
-                    Gates & Gate Operators
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact & Quick Links */}
-            <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-lg font-heading font-semibold mb-4">Contact & Links</h3>
-              <div className="space-y-3 mb-4">
-                <div className="flex items-center justify-center md:justify-start space-x-3">
-                  <Phone className="h-4 w-4 text-accent" />
-                  <a href="tel:9181234567" className="hover:text-primary transition-colors">
-                    (918) 123-4567
-                  </a>
-                </div>
-                <div className="flex items-center justify-center md:justify-start space-x-3">
-                  <Mail className="h-4 w-4 text-accent" />
-                  <a href="mailto:info@omnifence.com" className="hover:text-primary transition-colors">
-                    info@omnifence.com
-                  </a>
-                </div>
-              </div>
-              <ul className="space-y-2">
+              <h3 className="text-lg font-heading font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-3">
                 <li>
                   <Link to="/services" className="text-white/80 hover:text-primary transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/locations" className="text-white/80 hover:text-primary transition-colors">
-                    Service Areas
+                  <Link to="/gallery" className="text-white/80 hover:text-primary transition-colors">
+                    Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link to="/quote" className="text-white/80 hover:text-primary transition-colors">
-                    Get a Quote
+                  <Link to="/locations" className="text-white/80 hover:text-primary transition-colors">
+                    Locations
                   </Link>
                 </li>
               </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="flex flex-col items-center md:items-start">
+              <h3 className="text-lg font-heading font-semibold mb-4">Contact Us</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-center md:justify-start space-x-3">
+                  <Phone className="h-4 w-4 text-accent flex-shrink-0" />
+                  <a href="tel:9181234567" className="hover:text-primary transition-colors">
+                    (918) 123-4567
+                  </a>
+                </div>
+                <div className="flex items-center justify-center md:justify-start space-x-3">
+                  <Mail className="h-4 w-4 text-accent flex-shrink-0" />
+                  <a href="mailto:info@omnifence.com" className="hover:text-primary transition-colors">
+                    info@omnifence.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
