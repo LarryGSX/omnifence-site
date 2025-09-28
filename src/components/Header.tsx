@@ -30,20 +30,20 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Bar with Phone Number */}
-      <div className="w-full bg-primary text-white py-2">
+      {/* Top Bar with Phone Number - Now Sticky */}
+      <div className="w-full bg-primary text-white py-2 sticky top-0 z-[101]">
         <div className="container-custom">
           <div className="flex items-center justify-center">
             <Phone className="h-4 w-4 mr-2" />
             <span>Call us now! </span>
-            <a href="tel:9187083668" className="ml-1 font-semibold hover:text-primary transition-colors">
+            <a href="tel:9187083668" className="ml-1 font-semibold hover:text-white hover:underline transition-all duration-200">
               (918) 708-3668
             </a>
           </div>
         </div>
       </div>
 
-      <header className="w-full bg-white shadow-sm sticky top-0 z-[100]">
+      <header className="w-full bg-white shadow-sm sticky top-10 z-[100]">
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
