@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import OptimizedImage from '@/components/OptimizedImage';
 
-// Define the photo categories and their images with corrected paths
+// Define the photo categories and their images
 const photoCategories = {
   'Ameristar': [
     '1000002893001(1).jpg',
@@ -13,7 +12,8 @@ const photoCategories = {
     '490654144_1083822673763818_6407982423294302308_n.jpg',
     '490754914_1085024603643625_8266391198350655194_n.jpg',
     '491509820_1083822503763835_8302664543931386057_n.jpg',
-    'FB_IMG_1660151993717.jpg'
+    'FB_IMG_1660151993717.jpg',
+    '../Hero_Image_12.jpg'
   ],
   'Commercial': [
     '488519825_1077025151110237_580836037559699280_n.jpg',
@@ -34,7 +34,9 @@ const photoCategories = {
     'Huemiller-All-Seasons-Colors-June-2022-1000-b 2.png',
     'Huemiller-All-Seasons-Colors-June-2022-1000-b.png',
     'IMG_5981.jpg',
-    'IMG_5982.jpg'
+    'IMG_5982.jpg',
+    '../Hero_Image_8.jpeg',
+    '../Privacy/Resized_20220717_202221.jpeg'
   ],
   'Privacy': [
     '20230216_173524.jpg',
@@ -48,7 +50,9 @@ const photoCategories = {
     'Attachment(81).jpg',
     'Attachment(98).jpg',
     'IMG_20230802_110624722(1).jpg',
-    'Resized_20220717_202221.jpeg'
+    '../Hero_Image_1.jpg',
+    '../Hero_Image_9.jpeg',
+    '../Hero_Image_11.jpg'
   ],
   'Round Rail': [
     'Attachment(88).jpg',
@@ -62,13 +66,6 @@ const photoCategories = {
     '492005296_1090761233069962_6048506380568357776_n.jpg',
     'IMG_20210908_185818560.jpg',
     'IMG_20210912_164937768.jpg'
-  ],
-  'Hero Images': [
-    'Hero_Image_1.jpg',
-    'Hero_Image_8.jpeg',
-    'Hero_Image_9.jpeg',
-    'Hero_Image_11.jpg',
-    'Hero_Image_12.jpg'
   ]
 };
 
@@ -84,27 +81,19 @@ const Gallery = () => {
     if (selectedCategory === 'All') {
       // Return all images with their category info
       return Object.entries(photoCategories).flatMap(([category, images]) =>
-        images.map(image => {
-          // Handle Hero Images category differently since they're in the root public folder
-          const src = category === 'Hero Images' ? `/${image}` : `/${category}/${image}`;
-          return {
-            src,
-            category,
-            filename: image
-          };
-        })
+        images.map(image => ({
+          src: `/${category}/${image}`,
+          category,
+          filename: image
+        }))
       );
     } else {
       // Return images from selected category
-      return photoCategories[selectedCategory as keyof typeof photoCategories]?.map(image => {
-        // Handle Hero Images category differently since they're in the root public folder
-        const src = selectedCategory === 'Hero Images' ? `/${image}` : `/${selectedCategory}/${image}`;
-        return {
-          src,
-          category: selectedCategory,
-          filename: image
-        };
-      }) || [];
+      return photoCategories[selectedCategory as keyof typeof photoCategories]?.map(image => ({
+        src: `/${selectedCategory}/${image}`,
+        category: selectedCategory,
+        filename: image
+      })) || [];
     }
   }, [selectedCategory]);
 
@@ -177,11 +166,15 @@ const Gallery = () => {
                 >
                   <CardContent className="p-0">
                     <div className="relative aspect-square overflow-hidden">
-                      <OptimizedImage
+                      <img
                         src={image.src}
-                        alt={`${image.category} project - ${image.filename}`}
+                        alt={`${image.category} project`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
+                        onError={(e) => {
+                          console.error(`Failed to load image: ${image.src}`);
+                          e.currentTarget.src = '/placeholder.svg';
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                       <div className="absolute top-2 left-2">
@@ -218,7 +211,7 @@ const Gallery = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <OptimizedImage
+            <img
               src={selectedImage}
               alt="Gallery image"
               className="max-w-full max-h-full object-contain"
@@ -242,7 +235,7 @@ const Gallery = () => {
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
-              <a href="tel:9187083668">Call (918) 708-3668</a>
+              <a href="tel:9181234567">Call (918) 123-4567</a>
             </Button>
           </div>
         </div>

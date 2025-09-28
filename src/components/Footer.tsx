@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import OptimizedImage from "@/components/OptimizedImage";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +13,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="md:col-span-2 flex flex-col items-center md:items-start">
               <div className="flex items-center space-x-2 mb-4">
-                <OptimizedImage src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
+                <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
                 <span className="text-xl font-heading font-bold">Omni Fence & Deck</span>
               </div>
               <p className="text-white/80 mb-6 max-w-md">
@@ -53,14 +52,14 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="tel:9187083668" className="hover:text-primary transition-colors">
-                    (918) 708-3668
+                  <a href="tel:9181234567" className="hover:text-primary transition-colors">
+                    (918) 123-4567
                   </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="mailto:sales@omnifence.net" className="hover:text-primary transition-colors">
-                    sales@omnifence.net
+                  <a href="mailto:info@omnifence.com" className="hover:text-primary transition-colors">
+                    info@omnifence.com
                   </a>
                 </div>
               </div>

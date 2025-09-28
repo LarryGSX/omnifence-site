@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
-import OptimizedImage from "@/components/OptimizedImage";
 const Locations = () => {
   // Primary service locations - most work happens within 50-100 miles of Tulsa
   const locations = [{
@@ -111,7 +110,7 @@ const Locations = () => {
       <section className="relative bg-primary py-20 md:py-28">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <OptimizedImage src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+          <img src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
           {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
@@ -209,7 +208,7 @@ We also serve communities and rural areas within our service radius not listed b
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
-              <a href="tel:9187083668">Call (918) 708-3668</a>
+              <a href="tel:9181234567">Call (918) 123-4567</a>
             </Button>
           </div>
         </div>
