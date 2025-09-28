@@ -184,10 +184,7 @@ We also serve communities and rural areas within our service radius not listed b
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               Don't See Your Area Listed?
             </h2>
-            <p className="text-lg text-gray-600 mb-2 max-w-2xl mx-auto">
-              We're always expanding our service areas! Contact us to see if we can serve your location. 
-              Special arrangements may be available for larger projects.
-            </p>
+            <p className="text-lg text-gray-600 mb-2 max-w-2xl mx-auto">We're always expanding our service areas! Contact us to see if we can serve your location.</p>
           </div>
           
           {/* Contact Form */}
