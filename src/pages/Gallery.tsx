@@ -78,16 +78,16 @@ const Gallery = () => {
 
   // Filter images based on selected category
   const filteredImages = useMemo(() => {
-    // Helper function to encode only when necessary (when there are spaces)
-    const smartEncode = (str: string) => {
-      return str.includes(' ') ? encodeURIComponent(str) : str;
+    // Helper function to encode spaces as %20 but leave other characters alone
+    const encodeSpaces = (str: string) => {
+      return str.replace(/ /g, '%20');
     };
 
     if (selectedCategory === 'All') {
       // Return all images with their category info
       return Object.entries(photoCategories).flatMap(([category, images]) =>
         images.map(image => ({
-          src: `/${smartEncode(category)}/${smartEncode(image)}`,
+          src: `/${encodeSpaces(category)}/${encodeSpaces(image)}`,
           category,
           filename: image
         }))
@@ -95,7 +95,7 @@ const Gallery = () => {
     } else {
       // Return images from selected category
       return photoCategories[selectedCategory as keyof typeof photoCategories]?.map(image => ({
-        src: `/${smartEncode(selectedCategory)}/${smartEncode(image)}`,
+        src: `/${encodeSpaces(selectedCategory)}/${encodeSpaces(image)}`,
         category: selectedCategory,
         filename: image
       })) || [];
