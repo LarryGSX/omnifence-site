@@ -68,12 +68,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-6 border-t border-white/20 text-center md:flex md:justify-between md:text-left">
-          <p className="text-white/60 mb-3 md:mb-0">
-            © {currentYear} Omni Fence and Deck. All rights reserved.
-          </p>
+        <div className="pt-6 border-t border-white/20 text-center">
           <p className="text-white/60">
-            Designed and developed by Lovable
+            © {currentYear} Omni Fence and Deck. All rights reserved.
           </p>
         </div>
       </div>
