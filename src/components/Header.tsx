@@ -43,7 +43,7 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="w-full bg-white shadow-sm sticky top-16 md:top-10 z-[100]">
+      <header className="w-full bg-white shadow-sm sticky top-[44px] md:top-10 z-[100]">
         <div className="container-custom py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
