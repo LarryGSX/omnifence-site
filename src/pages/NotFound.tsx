@@ -43,7 +43,7 @@ const NotFound = () => {
                   </Link>
                 </Button>
                 <Button asChild className="hover-scale">
-                  <Link to="/contact" className="inline-flex items-center">
+                  <Link to="/quote" className="inline-flex items-center">
                     Contact Support
                     <ArrowLeft className="ml-2 h-5 w-5" />
                   </Link>
@@ -57,10 +57,10 @@ const NotFound = () => {
                 <Link to="/services" className="text-gray-600 hover:text-primary transition-colors duration-300">
                   • Our Services
                 </Link>
-                <Link to="/about" className="text-gray-600 hover:text-primary transition-colors duration-300">
-                  • About Us
+                <Link to="/" className="text-gray-600 hover:text-primary transition-colors duration-300">
+                  • Home
                 </Link>
-                <Link to="/contact" className="text-gray-600 hover:text-primary transition-colors duration-300">
+                <Link to="/quote" className="text-gray-600 hover:text-primary transition-colors duration-300">
                   • Contact Us
                 </Link>
                 <Link to="/gallery" className="text-gray-600 hover:text-primary transition-colors duration-300">

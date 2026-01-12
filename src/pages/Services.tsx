@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,6 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
 const Services = () => {
+  useEffect(() => {
+    document.title = "Fencing & Deck Services | Residential & Commercial | Omni Fence Tulsa";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Professional fence and deck installation services in Tulsa, OK. Residential fencing, commercial fencing, custom decks, gates, and pre-stained options. Free quotes available.');
+    }
+  }, []);
+
   // Service-specific project images
   const residentialImages = ["/Privacy/Attachment(104).jpg", "/Privacy/20230509_173703.jpg", "/Privacy/Attachment(102).jpg", "/Privacy/IMG_20230802_110624722(1).jpg", "/Ameristar/491509820_1083822503763835_8302664543931386057_n.jpg", "/Ameristar/1000002894(1).jpg", "/Round%20Rail/Attachment(95).jpg"];
   const commercialImages = ["/Commercial/488519825_1077025151110237_580836037559699280_n.jpg", "/Commercial/488544588_1077025094443576_7595472113235010536_n.jpg", "/Commercial/488962114_1077025047776914_537378424244966229_n.jpg", "/Commercial/Attachment(137).jpg"];

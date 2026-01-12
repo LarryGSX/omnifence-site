@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -72,6 +72,14 @@ const photoCategories = {
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.title = "Project Gallery | Fence & Deck Photos | Omni Fence Tulsa";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Browse our gallery of completed fence and deck projects in Tulsa and surrounding areas. See examples of privacy fences, commercial fencing, vinyl, wood, and custom installations.');
+    }
+  }, []);
 
   // Get all categories including 'All'
   const categories = ['All', ...Object.keys(photoCategories)];

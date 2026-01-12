@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,6 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
 const Locations = () => {
+  useEffect(() => {
+    document.title = "Service Areas | Tulsa, Broken Arrow, Owasso & More | Omni Fence";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Omni Fence serves Tulsa and surrounding Oklahoma communities including Broken Arrow, Owasso, Bixby, Jenks, Sand Springs, Sapulpa, Claremore, and more. Contact us for service in your area.');
+    }
+  }, []);
+
   // Primary service locations - most work happens within 50-100 miles of Tulsa
   const locations = [{
     id: "tulsa-ok",
