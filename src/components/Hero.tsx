@@ -6,7 +6,7 @@ const Hero: FC = () => {
   return <section className="relative h-screen overflow-hidden">
       {/* Background Image - Restored to full vibrancy */}
       <div className="absolute inset-0 z-0">
-        <img src="/Hero_Image_11.jpg" alt="Professional fence installation in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+        <img src="/Hero_Image_11.jpg" alt="Professional fence installation in Tulsa, Oklahoma" width={1920} height={1080} className="w-full h-full object-cover" />
         {/* Minimal gradient overlay only at bottom for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
       </div>
@@ -14,9 +14,7 @@ const Hero: FC = () => {
       {/* Content Container */}
       <div className="container-custom relative z-30 h-full flex items-start justify-center h-screen pt-24 md:pt-32">
         {/* Text Content - Positioned in top third to showcase fence */}
-        <div className="w-full max-w-3xl text-center slide-up" style={{
-        animationDelay: '0.1s'
-      }}>
+        <div className="w-full max-w-3xl text-center slide-up delay-100">
           
           {/* Enhanced text shadows and subtle backdrop for readability without dulling image */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 [text-shadow:_0_4px_8px_rgb(0_0_0_/_80%),_0_2px_4px_rgb(0_0_0_/_90%)] border border-white/40 rounded-lg p-4 md:p-6 backdrop-blur-[1px] bg-gradient-to-b from-black/20 via-black/15 to-black/25">

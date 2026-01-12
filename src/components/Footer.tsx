@@ -14,7 +14,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="md:col-span-2 flex flex-col items-center md:items-start">
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" className="h-8 w-auto" />
+                <img src="/Omni_Fence_Logo_NoText.png" alt="Omni Fence & Deck Logo" width={32} height={32} className="h-8 w-auto" />
                 <span className="text-xl font-heading font-bold">Omni Fence & Deck</span>
               </div>
               <p className="text-white/80 mb-6 max-w-md">

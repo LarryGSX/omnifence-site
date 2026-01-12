@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
 import { BUSINESS } from '@/config/business';
+
+const cardDelayClasses = ["delay-300", "delay-400", "delay-500", "delay-600"];
+
 const Services = () => {
   useEffect(() => {
     document.title = "Fencing & Deck Services | Residential & Commercial | Omni Fence Tulsa";
@@ -77,14 +80,12 @@ const Services = () => {
       <section className="relative bg-primary py-20 md:py-32">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <img src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+          <img src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" width={1920} height={1080} className="w-full h-full object-cover" />
           {/* Overlay for text contrast - ensures WCAG AA compliance */}
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container-custom relative z-20">
-          <div className="max-w-4xl mx-auto text-center slide-up" style={{
-          animationDelay: '0.1s'
-        }}>
+          <div className="max-w-4xl mx-auto text-center slide-up delay-100">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Expert Fencing & Deck Solutions
@@ -108,9 +109,7 @@ const Services = () => {
       {/* Services Showcase Grid */}
       <section className="py-20 bg-gradient-to-b from-white to-secondary/30">
         <div className="container-custom">
-          <div className="text-center mb-16 slide-up" style={{
-          animationDelay: '0.2s'
-        }}>
+          <div className="text-center mb-16 slide-up delay-200">
             
             <h2 className="section-title">Our Premium Services</h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-600">
@@ -121,9 +120,7 @@ const Services = () => {
 
           {/* Main Services Grid - 2x2 Layout */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {services.map((service, index) => <Card key={service.id} id={service.id} className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70 flex flex-col" style={{
-            animationDelay: `${0.3 + index * 0.1}s`
-          }}>
+            {services.map((service, index) => <Card key={service.id} id={service.id} className={`scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70 flex flex-col slide-up ${cardDelayClasses[index]}`}>
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
@@ -156,7 +153,7 @@ const Services = () => {
                         <CarouselContent>
                           {service.gallery.map((image, imageIndex) => <CarouselItem key={imageIndex} className="basis-1/2">
                               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                                <img src={image} alt={`${service.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                                <img src={image} alt={`${service.title} project ${imageIndex + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                               </div>
                             </CarouselItem>)}
@@ -190,9 +187,7 @@ const Services = () => {
 
           {/* Pre-Stained Fencing - Full Width Card */}
           <div className="mb-16">
-            <Card id={preStainedService.id} className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70" style={{
-            animationDelay: '0.7s'
-          }}>
+            <Card id={preStainedService.id} className="scroll-mt-24 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary hover:border-primary/70 slide-up delay-700">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 rounded-full bg-primary/10 text-primary">
@@ -244,7 +239,7 @@ const Services = () => {
                       <CarouselContent>
                         {preStainedService.gallery.map((image, imageIndex) => <CarouselItem key={imageIndex} className="basis-1/2">
                             <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                              <img src={image} alt={`${preStainedService.title} project ${imageIndex + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                              <img src={image} alt={`${preStainedService.title} project ${imageIndex + 1}`} width={400} height={300} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                             </div>
                           </CarouselItem>)}
@@ -259,9 +254,7 @@ const Services = () => {
           </div>
 
           {/* Testimonial Pull-Quote */}
-          <div className="bg-primary/5 rounded-lg p-8 text-center slide-up" style={{
-          animationDelay: '0.8s'
-        }}>
+          <div className="bg-primary/5 rounded-lg p-8 text-center slide-up delay-800">
             <div className="flex justify-center mb-4">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-accent text-accent" />)}
             </div>

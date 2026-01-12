@@ -12,7 +12,7 @@ const NotFound = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')] bg-cover bg-center" style={{ opacity: 0.4 }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-transparent z-[11] opacity-50"></div>
         <div className="container-custom relative z-20">
-          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
+          <div className="max-w-3xl mx-auto text-center slide-up delay-100">
             <span className="accent-badge mb-4 inline-block">Error 404</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Page Not Found
@@ -29,7 +29,7 @@ const NotFound = () => {
       <section className="py-20 relative">
         <BackgroundBubbles position="right" />
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-3xl mx-auto text-center slide-up delay-200">
             <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
               <h2 className="text-2xl font-heading font-semibold mb-4 text-primary">Let's Get You Back on Track</h2>
               <p className="text-gray-600 mb-8">

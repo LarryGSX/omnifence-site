@@ -120,14 +120,12 @@ const Locations = () => {
       <section className="relative bg-primary py-20 md:py-28">
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
-          <img src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
+          <img src="/Hero_Image_8.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" width={1920} height={1080} className="w-full h-full object-cover" />
           {/* Overlay for text contrast - ensures WCAG AA compliance */}
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container-custom relative z-20">
-          <div className="max-w-4xl mx-auto text-center slide-up" style={{
-          animationDelay: '0.1s'
-        }}>
+          <div className="max-w-4xl mx-auto text-center slide-up delay-100">
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
               Serving Tulsa & Surrounding Areas
@@ -151,9 +149,7 @@ const Locations = () => {
       {/* Locations Grid */}
       <section className="py-20 bg-gradient-to-b from-white to-secondary/30">
         <div className="container-custom">
-          <div className="text-center mb-16 slide-up" style={{
-          animationDelay: '0.2s'
-        }}>
+          <div className="text-center mb-16 slide-up delay-200">
             
             <h2 className="section-title">Our Service Locations</h2>
             <p className="text-lg max-w-3xl mx-auto text-gray-600">Professional fencing and deck installation services throughout the Greater Tulsa metropolitan area and surrounding communities.
@@ -165,9 +161,7 @@ We also serve communities and rural areas within our service radius not listed b
           <div className="max-w-4xl mx-auto mb-12">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
-                {locations.map((location, index) => <div key={location.id} className="flex items-center" style={{
-                animationDelay: `${0.3 + index * 0.05}s`
-              }}>
+                {locations.map((location, index) => <div key={location.id} className="flex items-center slide-up delay-300">
                     <MapPin className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
                     <span className={`font-medium ${location.isHeadquarters ? 'text-primary font-semibold' : 'text-gray-700'}`}>
                       {location.city}
@@ -181,16 +175,12 @@ We also serve communities and rural areas within our service radius not listed b
           </div>
 
           {/* Additional Coverage Note */}
-          <div className="bg-white/80 rounded-lg p-6 text-center mb-8 slide-up" style={{
-          animationDelay: '0.8s'
-        }}>
+          <div className="bg-white/80 rounded-lg p-6 text-center mb-8 slide-up delay-800">
             
           </div>
 
           {/* Contact Section for Unlisted Areas */}
-          <div className="text-center slide-up" style={{
-          animationDelay: '0.9s'
-        }}>
+          <div className="text-center slide-up delay-900">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
               Don't See Your Area Listed?
             </h2>

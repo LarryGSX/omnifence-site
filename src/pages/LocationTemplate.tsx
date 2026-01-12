@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Fence, Shield, Check, MapPin, ArrowRight } from "lucide-react";
 
+const delayClasses = ["delay-400", "delay-500", "delay-600", "delay-700"];
+
 const LocationTemplate = () => {
   return (
     <main className="overflow-hidden">
@@ -10,13 +12,13 @@ const LocationTemplate = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/80"></div>
         <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
         <div className="container-custom relative">
-          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.1s' }}>
+          <div className="max-w-3xl mx-auto text-center slide-up delay-100">
             <span className="accent-badge mb-4 inline-block">Local Service</span>
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-white">
               Best Fence Company in [Location Name]
             </h1>
             <p className="text-xl mb-8 text-white/90">
-              Professional fencing and deck solutions for [Location Name] homeowners and businesses. 
+              Professional fencing and deck solutions for [Location Name] homeowners and businesses.
               Quality craftsmanship, exceptional service, and lasting results guaranteed.
             </p>
             <Button asChild size="lg" className="hover-scale">
@@ -33,20 +35,20 @@ const LocationTemplate = () => {
       <section className="py-20 relative">
         <div className="absolute top-1/2 left-0 w-20 h-[80%] bg-accent/5 -z-10 rounded-r-full"></div>
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-3xl mx-auto slide-up delay-200">
             <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              Welcome to Omni Fence and Deck in [Location Name]. We're proud to serve the [Location Name] community 
-              with high-quality fencing and deck solutions. Our team of local experts understands the unique needs 
+              Welcome to Omni Fence and Deck in [Location Name]. We're proud to serve the [Location Name] community
+              with high-quality fencing and deck solutions. Our team of local experts understands the unique needs
               and preferences of [Location Name] residents, ensuring each project perfectly complements your property
               and meets your specific requirements.
             </p>
             <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              From traditional wooden fences that blend with [Local Landmark Mention] to modern vinyl solutions 
-              that withstand [Location Name]'s weather conditions, we provide a wide range of options to enhance 
+              From traditional wooden fences that blend with [Local Landmark Mention] to modern vinyl solutions
+              that withstand [Location Name]'s weather conditions, we provide a wide range of options to enhance
               your property's security, privacy, and curb appeal.
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              Contact our [Location Name] team today at [Local Phone Number] to discuss your project and schedule 
+              Contact our [Location Name] team today at [Local Phone Number] to discuss your project and schedule
               a free consultation.
             </p>
           </div>
@@ -56,7 +58,7 @@ const LocationTemplate = () => {
       {/* Services in Location */}
       <section className="py-20 bg-secondary relative">
         <div className="container-custom">
-          <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="text-center mb-12 slide-up delay-300">
             <span className="accent-badge mb-4 inline-block">Our Services</span>
             <h2 className="section-title">Our Services in [Location Name]</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
@@ -65,35 +67,35 @@ const LocationTemplate = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up delay-400">
               <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <Fence className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-4">Residential Fencing</h3>
               <p className="text-gray-600 mb-4">
-                Enhance your [Location Name] home with custom fencing solutions designed for security, 
+                Enhance your [Location Name] home with custom fencing solutions designed for security,
                 privacy, and aesthetic appeal. We offer various materials and styles to complement your property.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up" style={{ animationDelay: '0.5s' }}>
+            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up delay-500">
               <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-4">Commercial Fencing</h3>
               <p className="text-gray-600 mb-4">
-                Secure your [Location Name] business with durable, professional fencing solutions. 
+                Secure your [Location Name] business with durable, professional fencing solutions.
                 From retail properties to industrial facilities, we deliver reliable security barriers.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up" style={{ animationDelay: '0.6s' }}>
+            <div className="bg-white p-8 rounded-lg shadow-md hover-scale transition-all duration-300 slide-up delay-600">
               <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                 <Check className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-heading font-semibold mb-4">Custom Deck Building</h3>
               <p className="text-gray-600 mb-4">
-                Expand your living space with a custom-designed deck perfect for [Location Name] outdoor living. 
+                Expand your living space with a custom-designed deck perfect for [Location Name] outdoor living.
                 We create beautiful, durable decks tailored to your specific needs.
               </p>
             </div>
@@ -104,7 +106,7 @@ const LocationTemplate = () => {
       {/* Why Choose Us */}
       <section className="py-20 relative">
         <div className="container-custom">
-          <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="text-center mb-12 slide-up delay-300">
             <span className="accent-badge mb-4 inline-block">Why Choose Us</span>
             <h2 className="section-title">Why Choose Omni Fence in [Location Name]</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
@@ -131,7 +133,7 @@ const LocationTemplate = () => {
                 description: "We've built a strong reputation in [Location Name] through years of reliable service and countless satisfied customers."
               }
             ].map((item, index) => (
-              <div key={index} className="flex items-start slide-up" style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
+              <div key={index} className={`flex items-start slide-up ${delayClasses[index]}`}>
                 <div className="mr-4 bg-primary/10 p-3 rounded-full">
                   <Check className="h-6 w-6 text-primary" />
                 </div>
@@ -148,7 +150,7 @@ const LocationTemplate = () => {
       {/* Map Section */}
       <section className="py-20 bg-secondary relative">
         <div className="container-custom">
-          <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="text-center mb-12 slide-up delay-300">
             <span className="accent-badge mb-4 inline-block">Service Area</span>
             <h2 className="section-title">Our [Location Name] Service Area</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
@@ -156,7 +158,7 @@ const LocationTemplate = () => {
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="bg-white p-6 rounded-lg shadow-md slide-up delay-400">
             <div className="bg-gray-100 w-full h-80 rounded-lg flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -166,7 +168,7 @@ const LocationTemplate = () => {
             </div>
           </div>
 
-          <div className="mt-12 text-center slide-up" style={{ animationDelay: '0.5s' }}>
+          <div className="mt-12 text-center slide-up delay-500">
             <p className="text-lg mb-6 text-gray-700">
               Our [Location Name] office is located at [Local Address if applicable].
               <br />
@@ -185,7 +187,7 @@ const LocationTemplate = () => {
       {/* Local Testimonials */}
       <section className="py-20 relative">
         <div className="container-custom">
-          <div className="text-center mb-12 slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="text-center mb-12 slide-up delay-300">
             <span className="accent-badge mb-4 inline-block">Testimonials</span>
             <h2 className="section-title">[Location Name] Customer Testimonials</h2>
             <p className="text-lg max-w-2xl mx-auto text-gray-600">
@@ -211,7 +213,7 @@ const LocationTemplate = () => {
                 role: "Professional Contractor"
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-8 hover-scale transition-all duration-300 slide-up" style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
+              <div key={index} className={`bg-white rounded-lg shadow-md p-8 hover-scale transition-all duration-300 slide-up ${delayClasses[index]}`}>
                 <div className="flex mb-4 text-accent">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -235,7 +237,7 @@ const LocationTemplate = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary/80"></div>
         <div className="absolute inset-0 bg-[url('/images/cta-bg.jpg')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
         <div className="container-custom relative">
-          <div className="max-w-3xl mx-auto text-center slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="max-w-3xl mx-auto text-center slide-up delay-300">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Ready to Transform Your [Location Name] Property?</h2>
             <p className="text-xl mb-8 text-white/90">
               Contact us today for a free consultation and quote. Let's discuss how we can enhance your property with our premium fencing and deck solutions.

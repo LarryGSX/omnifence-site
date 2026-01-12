@@ -45,9 +45,7 @@ const Testimonials = () => {
   return <section className="py-16 md:py-24 bg-secondary relative">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
       <div className="container-custom">
-        <div className="text-center mb-12 slide-up" style={{
-        animationDelay: '0.1s'
-      }}>
+        <div className="text-center mb-12 slide-up delay-100">
           
           <h2 className="section-title">What Our Clients Say</h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-600">
