@@ -78,8 +78,8 @@ const Services = () => {
         {/* Background Image - Using img tag for better quality control */}
         <div className="absolute inset-0 z-0">
           <img src="/Privacy/Resized_20220717_202221.jpeg" alt="Professional fencing services in Tulsa, Oklahoma" className="w-full h-full object-cover" />
-          {/* Minimal gradient overlay only at bottom for text contrast - matches home page */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+          {/* Overlay for text contrast - ensures WCAG AA compliance */}
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container-custom relative z-20">
           <div className="max-w-4xl mx-auto text-center slide-up" style={{

@@ -6,9 +6,25 @@ import { Badge } from '@/components/ui/badge';
 import { BUSINESS } from '@/config/business';
 import { photoCategories, PhotoCategory } from '@/data/gallery';
 
+// Category-specific alt text descriptions for better accessibility
+const categoryDescriptions: Record<string, string> = {
+  'Ameristar': 'Ameristar ornamental steel fence installation in Tulsa area',
+  'Commercial': 'Commercial security fence installation for business property',
+  'Gates-and-Gate-Operators': 'Custom gate and automatic gate operator installation',
+  'Pre-Stained': 'Pre-stained wood fence showcasing available color options',
+  'Privacy': 'Privacy fence installation for residential property in Oklahoma',
+  'Round Rail': 'Round rail ranch-style fence installation',
+  'Vinyl': 'Vinyl fence installation with low-maintenance design'
+};
+
+const getImageAltText = (category: string, index: number): string => {
+  const baseDescription = categoryDescriptions[category] || `${category} fence project`;
+  return `${baseDescription} - Project ${index + 1} by Omni Fence and Deck`;
+};
+
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; category: string } | null>(null);
 
   useEffect(() => {
     document.title = "Project Gallery | Fence & Deck Photos | Omni Fence Tulsa";
@@ -47,13 +63,33 @@ const Gallery = () => {
     }
   }, [selectedCategory]);
 
-  const openLightbox = (imageSrc: string) => {
-    setSelectedImage(imageSrc);
+  const openLightbox = (imageSrc: string, category: string) => {
+    setSelectedImage({ src: imageSrc, category });
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
   };
+
+  // Handle Escape key to close lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImage) {
+        closeLightbox();
+      }
+    };
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleKeyDown);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -109,16 +145,16 @@ const Gallery = () => {
           {filteredImages.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredImages.map((image, index) => (
-                <Card 
+                <Card
                   key={`${image.category}-${index}`}
                   className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
-                  onClick={() => openLightbox(image.src)}
+                  onClick={() => openLightbox(image.src, image.category)}
                 >
                   <CardContent className="p-0">
                     <div className="relative aspect-square overflow-hidden">
                       <img
                         src={image.src}
-                        alt={`${image.category} project`}
+                        alt={getImageAltText(image.category, index)}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                         onError={(e) => {
@@ -147,23 +183,29 @@ const Gallery = () => {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="lightbox-title"
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
+          <span id="lightbox-title" className="sr-only">
+            Image viewer - {selectedImage.category} project
+          </span>
           <div className="relative max-w-7xl max-h-full">
             <button
               onClick={closeLightbox}
               className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-2"
-              aria-label="Close image"
+              aria-label="Close image viewer"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
             <img
-              src={selectedImage}
-              alt="Gallery image"
+              src={selectedImage.src}
+              alt={`${selectedImage.category} fence project by Omni Fence`}
               className="max-w-full max-h-full object-contain"
               onClick={(e) => e.stopPropagation()}
             />
