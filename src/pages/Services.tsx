@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Fence, Shield, Hammer, KeyRound, CheckCircle, Award, Clock, Star, Brush } from "lucide-react";
+import { BUSINESS } from '@/config/business';
 const Services = () => {
   useEffect(() => {
     document.title = "Fencing & Deck Services | Residential & Commercial | Omni Fence Tulsa";
@@ -286,7 +287,7 @@ const Services = () => {
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
-              <a href="tel:9187083668">Call (918) 708-3668</a>
+              <a href={`tel:${BUSINESS.phoneRaw}`}>Call {BUSINESS.phone}</a>
             </Button>
           </div>
         </div>

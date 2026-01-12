@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { BUSINESS } from '@/config/business';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,8 +37,8 @@ const Header = () => {
           <div className="flex items-center justify-center">
             <Phone className="h-4 w-4 mr-2" />
             <span>Call us now! </span>
-            <a href="tel:9187083668" className="ml-1 font-semibold hover:text-white hover:underline transition-all duration-200">
-              (918) 708-3668
+            <a href={`tel:${BUSINESS.phoneRaw}`} className="ml-1 font-semibold hover:text-white hover:underline transition-all duration-200">
+              {BUSINESS.phone}
             </a>
           </div>
         </div>

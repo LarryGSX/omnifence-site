@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
+import { BUSINESS } from '@/config/business';
 const Locations = () => {
   useEffect(() => {
     document.title = "Service Areas | Tulsa, Broken Arrow, Owasso & More | Omni Fence";
@@ -217,7 +218,7 @@ We also serve communities and rural areas within our service radius not listed b
               <Link to="/quote">Get Free Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="hover:bg-primary/10 hover:text-primary hover:border-primary/30">
-              <a href="tel:9187083668">Call (918) 708-3668</a>
+              <a href={`tel:${BUSINESS.phoneRaw}`}>Call {BUSINESS.phone}</a>
             </Button>
           </div>
         </div>

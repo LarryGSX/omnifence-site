@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BUSINESS } from '@/config/business';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -52,14 +53,14 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="tel:9187083668" className="hover:text-primary transition-colors">
-                    (918) 708-3668
+                  <a href={`tel:${BUSINESS.phoneRaw}`} className="hover:text-primary transition-colors">
+                    {BUSINESS.phone}
                   </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start space-x-3">
                   <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                  <a href="mailto:sales@omnifence.net" className="hover:text-primary transition-colors">
-                    sales@omnifence.net
+                  <a href={`mailto:${BUSINESS.email}`} className="hover:text-primary transition-colors">
+                    {BUSINESS.email}
                   </a>
                 </div>
               </div>
@@ -70,7 +71,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-6 border-t border-white/20 text-center">
           <p className="text-white/60">
-            © {currentYear} Omni Fence and Deck. All rights reserved.
+            © {currentYear} {BUSINESS.name}. All rights reserved.
           </p>
         </div>
       </div>

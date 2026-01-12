@@ -1,13 +1,5 @@
 import * as React from 'react';
 
-// Extend Window interface to include Tally
-declare global {
-  interface Window {
-    Tally?: {
-      loadEmbeds: () => void;
-    };
-  }
-}
 const ShortQuoteForm = () => {
   React.useEffect(() => {
     // Load Tally script if not already loaded

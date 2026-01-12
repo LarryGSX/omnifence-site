@@ -1,14 +1,5 @@
 import * as React from "react";
 
-// Extend Window interface to include Tally
-declare global {
-  interface Window {
-    Tally?: {
-      loadEmbeds: () => void;
-    };
-  }
-}
-
 const Quote = () => {
   React.useEffect(() => {
     document.title = "Get a Free Quote | Omni Fence and Deck | Tulsa OK";
