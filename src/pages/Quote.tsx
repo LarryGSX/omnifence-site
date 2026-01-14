@@ -11,8 +11,6 @@ const Quote = () => {
       metaDescription.setAttribute('content', 'Request a free fence or deck installation quote from Omni Fence and Deck in Tulsa, Oklahoma. Fast response, professional service, competitive pricing.');
     }
 
-    let timeoutId: NodeJS.Timeout;
-
     // Load Tally script if not already loaded
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
@@ -30,7 +28,7 @@ const Quote = () => {
     document.body.appendChild(script);
 
     // Set a timeout to show fallback if form doesn't load
-    timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       const iframe = document.querySelector('iframe[data-tally-src*="wQLpv1"]');
       if (iframe && (iframe as HTMLIFrameElement).offsetHeight === 0) {
         setHasError(true);

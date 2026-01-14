@@ -5,8 +5,6 @@ const ShortQuoteForm = () => {
   const [hasError, setHasError] = React.useState(false);
 
   React.useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
     // Load Tally script if not already loaded
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
@@ -24,7 +22,7 @@ const ShortQuoteForm = () => {
     document.body.appendChild(script);
 
     // Set a timeout to show fallback if form doesn't load
-    timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       const iframe = document.querySelector('iframe[data-tally-src*="w45Rzr"]');
       if (iframe && (iframe as HTMLIFrameElement).offsetHeight === 0) {
         setHasError(true);

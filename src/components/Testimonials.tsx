@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Quote } from "lucide-react";
 interface TestimonialProps {
   quote: string;
   author: string;

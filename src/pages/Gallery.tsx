@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BUSINESS } from '@/config/business';
-import { photoCategories, PhotoCategory } from '@/data/gallery';
+import { photoCategories } from '@/data/gallery';
 
 // Category-specific alt text descriptions for better accessibility
 const categoryDescriptions: Record<string, string> = {

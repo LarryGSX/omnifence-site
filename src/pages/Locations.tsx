@@ -2,7 +2,6 @@ import * as React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Clock, CheckCircle, Star } from "lucide-react";
 import ShortQuoteForm from "@/components/ShortQuoteForm";
@@ -161,7 +160,7 @@ We also serve communities and rural areas within our service radius not listed b
           <div className="max-w-4xl mx-auto mb-12">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4">
-                {locations.map((location, index) => <div key={location.id} className="flex items-center slide-up delay-300">
+                {locations.map((location) => <div key={location.id} className="flex items-center slide-up delay-300">
                     <MapPin className="h-4 w-4 text-primary mr-3 flex-shrink-0" />
                     <span className={`font-medium ${location.isHeadquarters ? 'text-primary font-semibold' : 'text-gray-700'}`}>
                       {location.city}

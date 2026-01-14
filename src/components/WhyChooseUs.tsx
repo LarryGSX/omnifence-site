@@ -1,4 +1,4 @@
-import { Cog, Shield, Check, Handshake, Award, FileCheck } from "lucide-react";
+import { Cog, Handshake, Award, FileCheck } from "lucide-react";
 interface FeatureProps {
   title: string;
   description: string;
